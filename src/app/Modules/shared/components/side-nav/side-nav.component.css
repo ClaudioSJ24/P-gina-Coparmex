@@ -1,0 +1,36 @@
+.mat-toolbar {
+  position: fixed;
+  top: 0;
+  box-shadow: 0px 1px 2px #4D4D4D;
+  z-index: 3;
+}
+
+.sidenav-container {
+  
+  margin-top: 130px;
+}
+
+
+#logoToolbar{
+  width:150px;
+    
+}
+
+.sidenav {
+    width: 250px;
+    margin-top: 60px;
+    box-shadow: 1px 0px 5px #4D4D4D;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.spacer {
+  flex : 1  1 auto;
+}
+
+
+
+
+

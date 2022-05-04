@@ -1,0 +1,45 @@
+.container {
+    padding: 15px;
+    height: 200vh;
+    
+  }
+  
+  .grid-item {
+    background-color: lightsalmon;
+    border-radius: 5px;
+    padding: 10px;
+    height: 100px;
+  }
+
+  .block-1{
+    margin-top: 20px;
+  }
+
+  .texto{
+      text-align: justify;
+      font-size: 1.2rem;
+  }
+
+  .titulo2{
+      text-align: center;
+      font-size: 1.6rem;
+      
+  }
+
+  .parrafo2{
+      text-align: center;
+      font-size: 1.2rem;
+  }
+
+  .titulo{
+      font-size: 2rem;
+  }
+  #logoh{
+      width: 70vh;
+  }
+  
+  .imagenes-i{
+      width: 250px;
+      border-radius: 15%;
+      margin: auto;
+ }
