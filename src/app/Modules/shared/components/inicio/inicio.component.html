@@ -1,5 +1,8 @@
-<div class="demo">
-  <carousel
+
+
+<div fxLayout fxLayout.xs fxLayout.sm fxLayout.md class="flex-container">
+
+    <carousel
     [images]="imagesForSlider"
     [objectFit]="'cover'"
     [cellWidth]="'100%'"
@@ -10,9 +13,12 @@
     [loop]="true"
   >
   </carousel>
+
 </div>
 
 <div fxLayout="column" fxLayoutGap="10px" class="flex-container">
+
+    
   <div
     fxLayout.gt-sm="row"
     fxLayout.lt-md="column"
@@ -45,21 +51,22 @@
     </div>
   </div>
 
-  <h1 class="titulo">CARACTERÍSTICAS</h1>
+  
 
   <div fxLayout.gt-sm="row" fxLayout.lt-md="column" fxFlexAlign="center center">
     <div fxLayout="column" fxFlexAlign="center center">
       <div fxFlex.gt-sm="100%" fxFlex.lt-md="50%" fxFlexFill class="grid-item">
+        <h1 class="titulo">CARACTERÍSTICAS</h1>
         <H2 class="titulo2">Asociación Voluntaria</H2>
         <p class="parrafo2">
           Los afiliados de Coparmex se asocian con el sindiato de manera
           voluntaria.
         </p>
         <div fxLayout fxFlexAlign="center center">
-            <img
-          src="../../../../../assets/img/inicio/voluntaria.PNG"
-          class="imagenes-i"
-        />
+          <img
+            src="../../../../../assets/img/inicio/voluntaria.PNG"
+            class="imagenes-i"
+          />
         </div>
       </div>
       <div fxFlex.gt-sm="100%" fxFlex.lt-md="50%" fxFlexFill class="grid-item">
@@ -70,10 +77,10 @@
           la prosperidad del país.
         </p>
         <div fxLayout fxFlexAlign="center center">
-            <img
-          src="../../../../../assets/img/inicio/indeoendencia.PNG"
-          class="imagenes-i"
-        />
+          <img
+            src="../../../../../assets/img/inicio/indeoendencia.PNG"
+            class="imagenes-i"
+          />
         </div>
       </div>
 
@@ -90,12 +97,75 @@
           confederación.
         </p>
         <div fxLayout fxFlexAlign="center center">
-            <img
-          src="../../../../../assets/img/inicio/apertura.PNG"
-          class="imagenes-i"
-        />
+          <img
+            src="../../../../../assets/img/inicio/apertura.PNG"
+            class="imagenes-i"
+          />
         </div>
       </div>
+
+      <div
+        fxFlex.gt-sm="100%"
+        fxFlex.lt-md="50%"
+        fxFlexAlign="center center"
+        fxFlexFill
+        class="grid-item"
+      >
+        <H1 class="titulo">SER COPARMEX</H1>
+
+        <div fxLayout fxLayout.xs fxLayout.sm fxLayout.md fxFlexAlign="center center">
+          <youtube-player class="video"
+            videoId="4x-7MwdI6T0"
+            suggestedQuality="highres"
+            [height]="250"
+            [width]="500"
+            [startSeconds]="4"
+            [endSeconds]="8"
+          >
+          </youtube-player>
+        </div>
+      </div>
+
+      
+    </div>
+
+
+    
+
+  </div>
+
+  <div
+    fxLayout.gt-sm="row"
+    fxLayout.lt-md="column"
+    fxLayoutGap="10px"
+    fxFlex="33%"
+    class="block-1"
+  >
+    <div fxFlex.gt-sm="50%" fxFlex.lt-md="50%" fxFlexFill fxLayoutAlign="center center" class="grid-item">
+        <div fxLayout="column">
+            <H1 class="titulo">REPRESENTATIVIDAD</H1>
+       <p class="texto">
+
+        Nuestros 65 Centros Empresariales, reunidos atráves de 14 Federaciones a lo largo y ancho de la República Mexicana, conforman la representación local y la fuerza Nacional de la Confederación.
+
+       </p>
+        <img src="../../../../../assets/img/inicio/mapa.PNG"  id="mapa"/>
+        </div>
+        
+       
+      
+    </div>
+
+    <div
+      fxFlex.gt-sm="50%"
+      fxFlex.lt-md="50%"
+      fxLayoutAlign="center center"
+      fxFlexFill
+      class="grid-item"
+    >
+      <img  src="../../../../../assets/img/inicio/mapa1.PNG " id="mapa1"/>
     </div>
   </div>
+
+  
 </div>

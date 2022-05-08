@@ -5,7 +5,7 @@
   }
   
   .grid-item {
-    background-color: lightsalmon;
+    
     border-radius: 5px;
     padding: 10px;
     height: 100px;
@@ -16,7 +16,7 @@
   }
 
   .texto{
-      text-align: justify;
+      text-align: center;
       font-size: 1.2rem;
   }
 
@@ -32,14 +32,31 @@
   }
 
   .titulo{
+      margin-top: 20px;
+      margin-bottom: 30px;
       font-size: 2rem;
   }
   #logoh{
       width: 70vh;
+  }
+
+  .video{
+      margin: auto;
+      
   }
   
   .imagenes-i{
       width: 250px;
       border-radius: 15%;
       margin: auto;
+ }
+
+ #mapa{
+     width: 100%;
+     
+ }
+
+ #mapa1{
+     
+     width: 100%;
  }

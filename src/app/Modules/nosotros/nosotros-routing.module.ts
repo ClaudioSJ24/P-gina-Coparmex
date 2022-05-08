@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NosotrosCComponent } from './components/nosotros-c/nosotros-c.component';
+import { NosotrosComponent } from './components/nosotros/nosotros.component';
+
 
 
 const routes: Routes = [
 
   {
     path: '',
-    component: NosotrosCComponent
+    component: NosotrosComponent
   }
 ];
 
