@@ -4,7 +4,7 @@
   }
   
   .grid-item {
-    background-color: lightsalmon;
+    /*background-color: lightsalmon;*/
     border-radius: 5px;
     margin: 10px auto;
     padding: 10px;
@@ -32,6 +32,25 @@
     margin-top: 20px;
     margin-bottom: 30px;
     font-size: 2rem;
+}
+
+
+
+
+.imagenes{
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    
+}
+
+.radio{
+    border-radius: 50%;
+}
+
+#organigrama{
+    width: 950px;
+    height: 900px;
 }
 
  

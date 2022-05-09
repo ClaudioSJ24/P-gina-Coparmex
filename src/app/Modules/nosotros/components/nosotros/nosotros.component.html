@@ -1,105 +1,310 @@
-
 <div fxLayout="column" fxLayoutGap="10px" class="flex-container">
+  <div fxLayout fxLayout.xs fxLayout.sm fxLayout.md class="flex-container">
+    <carousel
+      [images]="imagesForSlider"
+      [objectFit]="'cover'"
+      [cellWidth]="'100%'"
+      [height]="400"
+      [arrows]="false"
+    >
+    </carousel>
+  </div>
+
+  <div fxLayout.gt-sm="row" fxLayout.lt-md="column" class="block-2">
+    <div
+      fxFlex.gt-sm="0%"
+      fxFlex.lt-md="0%"
+      fxLayoutAlign="center center"
+      fxFlexFill
+    ></div>
+    <div
+      fxFlex.gt-sm="50%"
+      fxFlex.lt-md="50%"
+      fxLayoutAlign="center center"
+      fxFlexFill
+      class="grid-item"
+    >
+
+    <img src="../../../../../assets/img/nosotros/mexico.png" alt="mexico" class="imagenes">
+      <p class="texto">
+        Somos la confederación patronal de la República Mexicana
+      </p>
+    </div>
+  </div>
+
+  <div fxLayout.gt-sm="row" fxLayout.lt-md="column" class="block-2">
+    <div
+      fxFlex.gt-sm="50%"
+      fxFlex.lt-md="50%"
+      fxLayoutAlign="center center"
+      fxFlexFill
+      class="grid-item"
+    >
+    <img src="../../../../../assets/img/nosotros/mexico1.png" alt="mexico" class="imagenes">
+      <p class="texto">
+        Somos un sindicato de empresarios de afiliación voluntaria que integra a
+        más de 36 mil socios de todos los tamaños y actividades, con presencia
+        en toda la República Mexicana.
+      </p>
+    </div>
+    <div
+      fxFlex.gt-sm="0%"
+      fxFlex.lt-md="0%"
+      fxLayoutAlign="center center"
+      fxFlexFill
+    ></div>
+  </div>
+
+  <div fxLayout.gt-sm="row" fxLayout.lt-md="column" class="block-2">
+    <div
+      fxFlex.gt-sm="0%"
+      fxFlex.lt-md="0%"
+      fxLayoutAlign="center center"
+      fxFlexFill
+    ></div>
+    <div
+      fxFlex.gt-sm="50%"
+      fxFlex.lt-md="50%"
+      fxLayoutAlign="center center"
+      fxFlexFill
+      class="grid-item"
+    >
+    <img src="../../../../../assets/img/nosotros/partido.jpg" alt="mexico" class="imagenes radio">
+      <p class="texto">
+        Somos una organización política en sentido amplio (no apartidista), por
+        que defendemos los intereses legítimos en la libre empresa y su
+        quehacer.
+      </p>
+    </div>
+  </div>
+
+  <div fxLayout.gt-sm="row" fxLayout.lt-md="column" class="block-2">
+    <div
+      fxFlex.gt-sm="50%"
+      fxFlex.lt-md="50%"
+      fxLayoutAlign="center center"
+      fxFlexFill
+      class="grid-item"
+    >
+    <img src="../../../../../assets/img/nosotros/equilibrio2.png" alt="mexico" class="imagenes radio">
+      <p class="texto">
+        Se sustenta en principios y valores regidos por la ética y arientados a
+        la consecución del bien común.
+      </p>
+    </div>
+    <div
+      fxFlex.gt-sm="0%"
+      fxFlex.lt-md="0%"
+      fxLayoutAlign="center center"
+      fxFlexFill
+    ></div>
+  </div>
+
+  <div fxLayout.gt-sm="row" fxLayout.lt-md="column" class="block-2">
+    <div
+      fxFlex.gt-sm="0%"
+      fxFlex.lt-md="0%"
+      fxLayoutAlign="center center"
+      fxFlexFill
+    ></div>
+    <div
+      fxFlex.gt-sm="50%"
+      fxFlex.lt-md="50%"
+      fxLayoutAlign="center center"
+      fxFlexFill
+      class="grid-item"
+    >
+    <img src="../../../../../assets/img/nosotros/tecnologia.jpg" alt="mexico" class="imagenes radio">
+      <p class="texto">
+        Pertenecemos a una organización que tiene 92 años de vida con fortaleza
+        institucional y visión de modernidad, contribuyendo a la transformación
+        de México.
+      </p>
+    </div>
+  </div>
+
+  <h1>¿QUÉ NO SOMOS?</h1>
+
+  <div fxLayout.gt-sm="row" fxLayout.lt-md="column" class="block-2">
 
     
-    <div fxLayout fxLayout.xs fxLayout.sm fxLayout.md class="flex-container">
+    <div
+      fxFlex.gt-sm="50%"
+      fxFlex.lt-md="50%"
+      fxLayoutAlign="center center"
+      fxFlexFill
+      class="grid-item"
+    >
+    <img src="../../../../../assets/img/nosotros/no1.png" alt="mexico" class="imagenes radio">
+      <p class="texto">
+        No somos una dependencia de gobierno
+      </p>
+    </div>
+    <div
+      fxFlex.gt-sm="0%"
+      fxFlex.lt-md="0%"
+      fxLayoutAlign="center center"
+      fxFlexFill
+    ></div>
+  </div>
 
-        <carousel
-        [images]="imagesForSlider"
-        [objectFit]="'cover'"
-        [cellWidth]="'100%'"
-        [height]="400"
-        [arrows]="false"
-        
-      >
-      </carousel>
+  <div fxLayout.gt-sm="row" fxLayout.lt-md="column" class="block-2">
+    <div
+      fxFlex.gt-sm="0%"
+      fxFlex.lt-md="0%"
+      fxLayoutAlign="center center"
+      fxFlexFill
+    ></div>
+    <div
+      fxFlex.gt-sm="50%"
+      fxFlex.lt-md="50%"
+      fxLayoutAlign="center center"
+      fxFlexFill
+      class="grid-item"
+    >
+    <img src="../../../../../assets/img/nosotros/no3.jpg" alt="mexico" class="imagenes radio">
+      <p class="texto">
+        No somos una empresa.
+      </p>
+    </div>
+  </div>
+
+  <div fxLayout.gt-sm="row" fxLayout.lt-md="column" class="block-2">
+    <div
+      fxFlex.gt-sm="50%"
+      fxFlex.lt-md="50%"
+      fxLayoutAlign="center center"
+      fxFlexFill
+      class="grid-item"
+    >
+    <img src="../../../../../assets/img/nosotros/no4.png" alt="mexico" class="imagenes radio">
+      <p class="texto">
+        No somos una paraestatal.
+      </p>
+    </div>
+    <div
+      fxFlex.gt-sm="0%"
+      fxFlex.lt-md="0%"
+      fxLayoutAlign="center center"
+      fxFlexFill
+    ></div>
+  </div>
+
+  <div fxLayout.gt-sm="row" fxLayout.lt-md="column" class="block-2">
+    <div
+      fxFlex.gt-sm="0%"
+      fxFlex.lt-md="0%"
+      fxLayoutAlign="center center"
+      fxFlexFill
+    ></div>
+    <div
+      fxFlex.gt-sm="50%"
+      fxFlex.lt-md="50%"
+      fxLayoutAlign="center center"
+      fxFlexFill
+      class="grid-item"
+    >
+    <img src="../../../../../assets/img/nosotros/no5.jpg" alt="mexico" class="imagenes radio">
+      <p class="texto">
+        No somos una cámara.
+      </p>
+    </div>
+  </div>
+
+  <div fxLayout.gt-sm="row" fxLayout.lt-md="column" class="block-2">
+    <div
+      fxFlex.gt-sm="50%"
+      fxFlex.lt-md="50%"
+      fxLayoutAlign="center center"
+      fxFlexFill
+      class="grid-item"
+    >
+    <img src="../../../../../assets/img/nosotros/no6.jpg" alt="mexico" class="imagenes radio">
+      <p class="texto">
+        No somos una casa de campaña de ningún partido político.
+      </p>
+    </div>
+    <div
+      fxFlex.gt-sm="0%"
+      fxFlex.lt-md="0%"
+      fxLayoutAlign="center center"
+      fxFlexFill
+    ></div>
+  </div>
+
+  <div fxLayout.gt-sm="row" fxLayout.lt-md="column" class="block-2">
+    <div
+      fxFlex.gt-sm="0%"
+      fxFlex.lt-md="0%"
+      fxLayoutAlign="center center"
+      fxFlexFill
+    ></div>
+    <div
+      fxFlex.gt-sm="50%"
+      fxFlex.lt-md="50%"
+      fxLayoutAlign="center center"
+      fxFlexFill
+      class="grid-item"
+    >
+    <img src="../../../../../assets/img/nosotros/no7.jpg" alt="mexico" class="imagenes radio">
+      <p class="texto">
+        No somos una consultoria de servicios empresariales.
+      </p>
+    </div>
+  </div>
+
+  <div fxLayout.gt-sm="row"  fxLayoutGap="30px" fxLayout.lt-md="column" class="block-2">
+    <div
+      fxFlex.gt-sm="50%"
+      fxFlex.lt-md="50%"
+      fxLayoutAlign="center center"
+      fxLayoutGap="30px"
+      fxFlexFill
+      class="grid-item"
+    >
+    <div fxLayout = "column"  fxLayoutGap="30px" fxLayoutAlign="center center">
+      <h1>MISIÓN</h1>
+    <img src="../../../../../assets/img/nosotros/mision.png" alt="mexico" class="imagenes radio">
+      <p class="texto">
+        Promover el bien común de las organizaciones empresariales, apoyando y defendiendo las necesidades de los socios mediante le impulso y solidaridad mutua a través de la mejora continua.
+      </p>
+    </div>
+    </div>
+    <div
+      fxFlex.gt-sm="50%"
+      fxFlex.lt-md="50%"
+      fxLayoutAlign="center center"
+      fxLayoutGap="30px"
+      fxFlexFill
+      class="grid-item"
+    >
+    <div fxLayout = "column" fxLayoutGap="30px" fxLayoutAlign="center center">
+      <H1>VISIÓN</H1>
+    <img src="../../../../../assets/img/nosotros/vision.png" alt="mexico" class="imagenes radio">
+      <p class="texto">
+        Constituirse como referente del sector empresarial, creando un entorno favorable para el diálogo y la convergencia de intereses, esfuerzos y recursos encaminados al bienestar de las empresas, instituciones u organismos afiliados.
+      </p>
+    </div>
+    </div>
+  </div>
+
+  <div fxLayout.gt-sm="row"  fxLayoutGap="30px" fxLayout.lt-md="column" class="block-2">
+    <div
+      fxFlex.gt-sm="100%"
+      fxFlex.lt-md="100%"
+      fxLayoutAlign="center center"
+      fxLayoutGap="30px"
+      fxFlexFill
+      class="grid-item"
+    >
+    <div fxLayout = "column"  fxLayoutGap="30px" fxLayoutAlign="center center">
+      <h1>STAFF</h1>
+      <img src="../../../../../assets/img/nosotros/organigrama2.png" alt="organigrama" id="organigrama">
+      
+    </div>
+    </div>
     
-    </div>
+  </div>
 
-    
-    
-
-    <div fxLayout.gt-sm="row" fxLayout.lt-md="column" 
-       class="block-2">
-        <div fxFlex.gt-sm="0%" fxFlex.lt-md="0%" fxLayoutAlign="center center" 
-        fxFlexFill>
-        
-        </div>
-        <div fxFlex.gt-sm="50%" fxFlex.lt-md="50%" fxLayoutAlign="center center" 
-        fxFlexFill class="grid-item">
-            <p class="texto">Somos la confederación patronal de la República Mexicana
-            
-            </p>
-        </div>
-    </div>
-
-    <div fxLayout.gt-sm="row" fxLayout.lt-md="column" 
-       class="block-2">
-        <div fxFlex.gt-sm="50%" fxFlex.lt-md="50%" fxLayoutAlign="center center" 
-        fxFlexFill class="grid-item">
-        <p class="texto" >Somos un sindicato de empresarios de afiliación voluntaria que integra a más de 36 mil socios de todos los tamaños y actividades, con presencia en toda la República Mexicana.
-
-        </p>
-        </div>
-        <div fxFlex.gt-sm="0%" fxFlex.lt-md="0%" fxLayoutAlign="center center" 
-        fxFlexFill ></div>
-    </div>
-
-    <div fxLayout.gt-sm="row" fxLayout.lt-md="column" 
-        class="block-2">
-        <div fxFlex.gt-sm="0%" fxFlex.lt-md="0%" fxLayoutAlign="center center" 
-        fxFlexFill>
-        
-        </div>
-        <div fxFlex.gt-sm="50%" fxFlex.lt-md="50%" fxLayoutAlign="center center" 
-        fxFlexFill class="grid-item">
-            <p class="texto">Somos una organización política en sentido amplio (no apartidista), por que defendemos los intereses legítimos en la libre empresa y su quehacer.
-                        
-            </p>
-        </div>
-    </div>
-
-    <div fxLayout.gt-sm="row" fxLayout.lt-md="column" 
-        class="block-2">
-        <div fxFlex.gt-sm="50%" fxFlex.lt-md="50%" fxLayoutAlign="center center" 
-        fxFlexFill class="grid-item">
-        <p class="texto">Se sustenta en principios y valores regidos por la ética y arientados a la consecución del bien común.
-
-        </p>
-        </div>
-        <div fxFlex.gt-sm="0%" fxFlex.lt-md="0%" fxLayoutAlign="center center" 
-        fxFlexFill ></div>
-    </div>
-
-    <div fxLayout.gt-sm="row" fxLayout.lt-md="column" 
-    class="block-2">
-    <div fxFlex.gt-sm="0%" fxFlex.lt-md="0%" fxLayoutAlign="center center" 
-    fxFlexFill>
-    
-    </div>
-    <div fxFlex.gt-sm="50%" fxFlex.lt-md="50%" fxLayoutAlign="center center" 
-    fxFlexFill class="grid-item">
-        <p class="texto">Pertenecemos a una organización que tiene 92 años de vida con fortaleza institucional y visión de modernidad, contribuyendo a la transformación de México.
-                    
-        </p>
-    </div>
+  
 </div>
-
-   <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxFlex="50%" class="block-2">
-      <div fxFlex fxHide.lt-md fxLayoutAlign="center center" 
-        fxFlexFill class="grid-item">B</div>
-      <div fxFlex="75%" fxLayoutAlign="center center" 
-        fxFlexFill class="grid-item">C</div>
-      <div fxFlex fxLayoutAlign="center center" 
-        fxFlexFill class="grid-item">D</div>
-    </div>
-
-
-
-    <div fxFlex="25%" class="block-3">
-      <div fxFlex fxLayoutAlign="center center" fxFlexFill class="grid-item">E</div>
-    </div>
-
-
-</div>
-
