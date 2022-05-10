@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class NosotrosComponent implements OnInit {
 
   imagesForSlider = [
-    {path: '../../../../../assets/img/nosotros/nosotros4.PNG'},
+    {path: '../../../../../assets/img/nosotros/nosotros4.png'},
     
   ];
 

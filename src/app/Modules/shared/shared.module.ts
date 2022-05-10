@@ -6,15 +6,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialUiModule } from '../material-ui/material-ui.module';
 import { RouterModule, Routes } from '@angular/router';
 import { YouTubePlayerModule } from "@angular/youtube-player";
-import { HomeCComponent } from './components/home-c/home-c.component';
-import { HomeComponent } from './components/home/home.component';
+
 import { InicioComponent } from './components/inicio/inicio.component';
 
 
 
 
 @NgModule({
-  declarations: [SideNavComponent, HomeCComponent, HomeComponent, InicioComponent],
+  declarations: [SideNavComponent, InicioComponent],
   imports: [
     CommonModule,
     RouterModule,

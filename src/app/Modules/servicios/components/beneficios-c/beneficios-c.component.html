@@ -1,0 +1,266 @@
+<div fxLayout="column" fxLayoutGap="10px" class="flex-container">
+  <div fxFlex="25%" class="block-1">
+    <div fxFlex fxLayoutAlign="center center" fxFlexFill class="grid-item">
+      A
+    </div>
+  </div>
+
+  <div
+    fxLayout="row"
+    fxLayout.lt-md="column"
+    fxLayoutGap="10px"
+    fxFlex="50%"
+    class="block-2"
+    
+  >
+    <div
+      fxFlex
+      fxHide.lt-md
+      fxLayoutAlign="center center"
+      fxFlexFill
+      class="grid-item"
+    >
+      B
+    </div>
+    <div
+      fxFlex="50%"
+      fxLayoutAlign="center center"
+      fxFlexFill
+      class="grid-item"
+    >
+      <div fxLayout = "column" fxFlexAlign="center center" class="imagenes-p">
+
+        <img src="../../../../../assets/img/beneficios/graduation.png" alt="">
+        <h2>Becas Escolares</h2>
+
+      </div>
+    </div>
+    <div fxFlex fxHide.lt-md fxLayoutAlign="center center" fxFlexFill class="grid-item">
+      D
+    </div>
+  </div>
+
+
+  <div
+    fxLayout="row"
+    fxLayout.lt-md="column"
+    fxLayoutGap="10px"
+    fxFlex="50%"
+    class="block-2"
+    *ngFor="let item of content"
+  >
+    <div
+      fxFlex
+      fxHide.lt-md
+      fxLayoutAlign="center center"
+      fxFlexFill
+      class="grid-item"
+    >
+      B
+    </div>
+    <div
+      fxFlex="50%"
+      fxLayoutAlign="center center"
+      fxFlexFill
+      class="grid-item"
+    >
+      <div fxLayout = "column" fxFlexAlign="center center" class="imagenes">
+
+        <img src="{{item.imagen}}" alt="">
+        <h2>{{item.description}}</h2>
+
+      </div>
+    </div>
+    <div fxFlex fxHide.lt-md fxLayoutAlign="center center" fxFlexFill class="grid-item">
+      D
+    </div>
+  </div>
+
+  <div
+    fxLayout="row"
+    fxLayout.lt-md="column"
+    fxLayoutGap="10px"
+    fxFlex="50%"
+    class="block-2"
+    
+  >
+    <div
+      fxFlex
+      fxHide.lt-md
+      fxLayoutAlign="center center"
+      fxFlexFill
+      class="grid-item"
+    >
+      B
+    </div>
+    <div
+      fxFlex="50%"
+      fxLayoutAlign="center center"
+      fxFlexFill
+      class="grid-item"
+    >
+      <div fxLayout = "column" fxFlexAlign="center center" class="imagenes-v">
+
+        <img src="../../../../../assets/img/beneficios/vinculacion1.png" alt="">
+        <h2>Vinculación</h2>
+
+      </div>
+    </div>
+    <div fxFlex fxHide.lt-md fxLayoutAlign="center center" fxFlexFill class="grid-item">
+      D
+    </div>
+  </div>
+  <h1>COMISIONES DE TRABAJO</h1>
+  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxFlex="50%" class="block-2">
+    <div fxFlex  fxLayoutAlign="start start" 
+      fxFlexFill class="grid-item">
+
+      <div fxLayout fxFlexAlign="center center">
+        <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+        <p class="texto">Comisión de mujeres embarazadas</p>
+      </div>
+    </div>
+    <div fxFlex="33%" fxLayoutAlign="start start"  
+      fxFlexFill class="grid-item">
+      <div fxLayout fxFlexAlign="center center">
+        <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+        <p class="texto">Comisión de industria de calzado</p>
+      </div>  
+      
+    </div>
+    <div fxFlex fxLayoutAlign="start start" 
+      fxFlexFill class="grid-item">
+
+      <div fxLayout fxFlexAlign="center center">
+        <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+        <p class="texto">Comisión de vivienda</p>
+      </div>
+      
+    </div>    
+  </div>
+
+  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxFlex="50%" class="block-2">
+    <div fxFlex  fxLayoutAlign="start start" 
+      fxFlexFill class="grid-item">
+
+      <div fxLayout fxFlexAlign="center center">
+        <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+        <p class="texto">Comisión fiscal</p>
+      </div>
+    </div>
+    <div fxFlex="33%" fxLayoutAlign="start start"  
+      fxFlexFill class="grid-item">
+      <div fxLayout fxFlexAlign="center center">
+        <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+        <p class="texto">Comisión de justicia</p>
+      </div>  
+      
+    </div>
+    <div fxFlex fxLayoutAlign="start start"  
+      fxFlexFill class="grid-item">
+
+      <div fxLayout fxFlexAlign="center center">
+        <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+        <p class="texto">Comisión de empresarios jovenes</p>
+      </div>
+      
+    </div>    
+  </div>
+
+  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxFlex="50%" class="block-2">
+    <div fxFlex  fxLayoutAlign="start start"  
+      fxFlexFill class="grid-item">
+        <div fxLayout fxFlexAlign="center center">
+            <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+            <p class="texto">Comisión de energia </p>
+        </div>
+      
+    </div>
+    <div fxFlex="33%" fxLayoutAlign="start start"  
+      fxFlexFill class="grid-item">
+      
+      <div fxLayout fxFlexAlign="center center">
+        <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+        <p class="texto">Comisión de negocios y financiamiento</p> 
+      </div>
+      
+    </div>
+    <div fxFlex fxLayoutAlign="start start"  
+      fxFlexFill class="grid-item">
+
+      <div fxLayout fxFlexAlign="center center">
+        <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+        <p class="texto">Comisión de capacitación</p>
+      </div>
+      
+    </div>    
+  </div>
+
+
+  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxFlex="50%" class="block-2">
+    <div fxFlex  fxLayoutAlign="start start"  
+      fxFlexFill class="grid-item">
+
+      <div fxLayout fxFlexAlign="center center">
+        <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+        <p class="texto">Comisión laboral y de capital humano</p>
+      </div>
+      
+    </div>
+    <div fxFlex="33%" fxLayoutAlign="start start"  
+      fxFlexFill class="grid-item">
+      
+      <div fxLayout fxFlexAlign="center center">
+        <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+        <p class="texto">Comisión de seguridad social y salud</p>
+      </div>
+      
+    </div>
+    <div fxFlex fxLayoutAlign="start start"  
+      fxFlexFill class="grid-item">
+
+      <div fxLayout fxFlexAlign="center center">
+        <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+        <p class="texto">Comisión de educación</p>
+      </div>
+      
+    </div>    
+  </div>
+
+
+  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxFlex="50%" class="block-2">
+    <div fxFlex  fxLayoutAlign="start start"  
+      fxFlexFill class="grid-item">
+        <div fxLayout fxFlexAlign="center center">
+
+            <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+            <p class="texto">Comisión de innovación empresarial</p>
+
+        </div>
+      
+    </div>
+    <div fxFlex="33%" fxLayoutAlign="start start"  
+      fxFlexFill class="grid-item">
+      <div fxLayout fxFlexAlign="center center">
+        <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+        <p class="texto">Comisión de desarrollo económico y regional</p> 
+      </div> 
+      
+    </div>
+    <div fxFlex fxLayoutAlign="start start"  
+      fxFlexFill class="grid-item">
+
+      <div fxLayout fxFlexAlign="center center">
+        <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+        <p class="texto">Comisión de medio ambiente</p>
+      </div>
+      
+    </div>    
+  </div>
+
+
+  
+</div>
+
+
+

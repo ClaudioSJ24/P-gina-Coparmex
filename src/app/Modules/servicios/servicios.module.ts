@@ -2,16 +2,20 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ServiciosRoutingModule } from './servicios-routing.module';
-import { ServiciosCComponent } from './components/servicios-c/servicios-c.component';
+
+import { BeneficiosCComponent } from './components/beneficios-c/beneficios-c.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
   declarations: [
-    ServiciosCComponent
+    
+    BeneficiosCComponent
   ],
   imports: [
     CommonModule,
-    ServiciosRoutingModule
+    ServiciosRoutingModule,
+    FlexLayoutModule
   ]
 })
 export class ServiciosModule { }
