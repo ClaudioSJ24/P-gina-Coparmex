@@ -1,5 +1,5 @@
 .grid-item {
-    background-color: lightsalmon;
+    /*background-color: lightsalmon;*/
     border-radius: 5px;
     padding: 10px;
     height: 100px;
@@ -37,3 +37,20 @@
     border-radius: 50%;
     margin: auto 10px;
 }
+.cont-img{
+
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    
+}
+
+.centrar{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    font-size: 2.5rem;
+    color: var(--third);
+
+}
+

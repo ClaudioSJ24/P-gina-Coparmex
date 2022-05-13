@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AfiliacionCComponent } from './afiliacion-c.component';
+import { AfiliacionComponent } from './afiliacion.component';
 
-describe('AfiliacionCComponent', () => {
-  let component: AfiliacionCComponent;
-  let fixture: ComponentFixture<AfiliacionCComponent>;
+describe('AfiliacionComponent', () => {
+  let component: AfiliacionComponent;
+  let fixture: ComponentFixture<AfiliacionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AfiliacionCComponent ]
+      declarations: [ AfiliacionComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AfiliacionCComponent);
+    fixture = TestBed.createComponent(AfiliacionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

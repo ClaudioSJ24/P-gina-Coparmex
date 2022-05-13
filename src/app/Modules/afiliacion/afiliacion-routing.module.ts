@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AfiliacionCComponent } from './components/afiliacion-c/afiliacion-c.component';
+import { AfiliacionComponent } from './components/afiliacion/afiliacion.component';
+
 
 const routes: Routes = [
   {
     path: '',
-    component: AfiliacionCComponent
+    component: AfiliacionComponent
   }
 ];
 

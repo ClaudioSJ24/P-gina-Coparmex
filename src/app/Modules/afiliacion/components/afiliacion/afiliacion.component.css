@@ -1,0 +1,61 @@
+.grid-item {
+    background-color: lightsalmon;
+    border-radius: 5px;
+    padding: 10px;
+    height: 100px;
+  }
+
+.conten-img{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  }
+
+.centrar-texto{
+  position: absolute;  
+  left: 5%;
+  font-size: 2.5rem;
+  color: var(--third);
+}
+
+h1{
+  text-align: center;
+  margin: 40px 40px;
+}
+
+mat-card{
+  margin-top: 10px;
+    
+}
+
+.parrafo{
+  margin:auto;
+  font-size: 1rem;
+}
+
+.ocultar{
+  color: white;
+}
+
+mat-card-content{
+  margin: auto;
+  height: auto;
+  
+}
+
+.contenido-img{
+  
+  height: 100px;
+  
+  object-position: center center;
+}
+
+.socio{
+  margin: auto;
+}
+
+.mat-18{
+  
+  
+  margin: auto 20px;
+}
