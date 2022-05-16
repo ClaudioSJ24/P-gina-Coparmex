@@ -23,6 +23,8 @@
     "@angular/router": "~13.3.0",
     "@angular/youtube-player": "^13.3.5",
     "@fortawesome/angular-fontawesome": "^0.10.2",
+    "@fortawesome/fontawesome-svg-core": "^6.1.0",
+    "@fortawesome/free-brands-svg-icons": "^6.1.0",
     "angular-responsive-carousel": "^2.1.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.4.0",

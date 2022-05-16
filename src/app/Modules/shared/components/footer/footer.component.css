@@ -1,10 +1,10 @@
 .container {
        
-    background-color: var(--second);
+    background-color: var(--primary);
   }
   
   .grid-item {
-    background-color: lightsalmon;
+    /*background-color: lightsalmon;*/
     border-radius: 5px;
     padding: 10px;
     height: 100px;
@@ -15,4 +15,23 @@
       height: 150px;
       text-align: center;
       
+  }
+
+  p{
+    color: white;
+    margin-left: 8px;
+  }
+
+  h3{
+    font-size: 1.2rem;
+    
+    
+    color: white;
+  }
+
+  .iconos-redes{
+    
+    stroke: white;
+    color: white;
+    font-size: 1.5rem;
   }

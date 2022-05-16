@@ -1,26 +1,58 @@
 <div class="flex-container container">
-    <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="10px" class="flex-container">
-        <div fxFlex fxLayoutAlign="center center" 
-          fxFlexFill class="grid-item">
-            <img src="../../../../../assets/img/logos/coparmex1.png"  alt="" class="footer-logo">
+  <div
+    fxLayout="row"
+    fxLayout.lt-sm="column"
+    fxLayoutGap="10px"
+    class="flex-container"
+  >
+    <div
+      fxFlex="28%"
+      fxLayoutAlign="center center"
+      fxFlexFill
+      class="grid-item"
+    >
+      <img
+        src="../../../../../assets/img/logos/coparmex1.png"
+        alt=""
+        class="footer-logo"
+      />
+    </div>
+
+    <div
+      fxFlex="44%"
+      
+      fxFlexFill
+      class="grid-item"
+    >
+      <div fxLayout = "column">
+        <h3>Dirección</h3>
+        <div fxLayout>
+          <mat-icon class="iconos-redes"> location_on</mat-icon>
+            <p>C. 2 Sur 315, Centro de la Ciudad, 75700, Tehucán, Pue.</p>
         </div>
-        <div fxFlex="33%" fxLayoutAlign="center center" 
-          fxFlexFill class="grid-item">
-
-          <div fxLayout="column">
-
-            <h3>Dirección</h3>
-            
-        
+        <div fxLayout>
+          <mat-icon class="iconos-redes">mail</mat-icon><p>contacto@coparmextehuacan.org.mx</p>
         </div>
-        <div fxFlex fxLayoutAlign="center center" 
-          fxFlexFill class="grid-item">
-          <div fxLayout="column" >
-
-            <h3>Redes Sociales</h3>
-            
-
-          </div>
+        <div fxLayout>
+          <mat-icon class="iconos-redes"> local_phone</mat-icon><p>238-383-3997</p>
         </div>
       </div>
+    </div>
+
+    <div
+      fxFlex="28%"
+      
+      fxFlexFill
+      class="grid-item"
+    >
+
+    <div fxLayout="column">
+      <h3 fxFlexAlign="start">Redes Sociales</h3>
+      <app-redes-s></app-redes-s>
+    </div>
+    
+      
+      
+    </div>
+  </div>
 </div>

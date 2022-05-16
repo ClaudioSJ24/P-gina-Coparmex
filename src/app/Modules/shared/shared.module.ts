@@ -10,20 +10,23 @@ import { YouTubePlayerModule } from "@angular/youtube-player";
 import { InicioComponent } from './components/inicio/inicio.component';
 import { CarrouselSComponent } from './components/carrousel-s/carrousel-s.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FontAsoweModule } from '../font-asowe/font-asowe.module';
+import { RedesSComponent } from './components/redes-s/redes-s.component';
 
 
 
 
 
 @NgModule({
-  declarations: [SideNavComponent, InicioComponent, CarrouselSComponent, FooterComponent],
+  declarations: [SideNavComponent, InicioComponent, CarrouselSComponent, FooterComponent, RedesSComponent],
   imports: [
     CommonModule,
     RouterModule,
     MaterialUiModule,
     FlexLayoutModule ,
     IvyCarouselModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    FontAsoweModule
     
      
   ],
