@@ -5,6 +5,9 @@ import { ServiciosRoutingModule } from './servicios-routing.module';
 
 import { BeneficiosCComponent } from './components/beneficios-c/beneficios-c.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { SharedModule } from '../shared/shared.module';
+
+
 
 
 @NgModule({
@@ -15,7 +18,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   imports: [
     CommonModule,
     ServiciosRoutingModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    SharedModule
+    
   ]
 })
 export class ServiciosModule { }

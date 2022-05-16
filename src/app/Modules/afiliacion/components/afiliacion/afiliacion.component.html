@@ -17,428 +17,325 @@
   </div>
 
   <div
-  fxLayout="row wrap"
-  fxLayout.xs="column"
-  fxLayoutAlign="center center"
-  fxLayoutGap="10px"
->
-  <div
-    fxFlex="15%"
-    fxFlex.sm="25%"
-    fxFlex.lg="20%"
+    fxLayout="row wrap"
+    fxLayout.xs="column"
     fxLayoutAlign="center center"
-    *ngFor="let socio of socios"
+    fxLayoutGap="10px"
   >
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title class="ocultar">Title</mat-card-title>
-        <mat-card-subtitle class="ocultar">Subtitle</mat-card-subtitle>
-      </mat-card-header>
+    <div
+      fxFlex="15%"
+      fxFlex.sm="25%"
+      fxFlex.lg="20%"
+      fxLayoutAlign="center center"
+      *ngFor="let socio of socios"
+    >
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title class="ocultar">Title</mat-card-title>
+          <mat-card-subtitle class="ocultar">Subtitle</mat-card-subtitle>
+        </mat-card-header>
 
-      <mat-card-content>
-        <img matCardImage src="{{ socio.img }}" class="contenido-img" />
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button>
-          <mat-icon class="mat-18">{{ socio.icon }}</mat-icon>
-        </button>
-      </mat-card-actions>
-    </mat-card>
-  </div>
-</div>
-
-<div FxLayout fxFlexAlign="center center" >
-  <h1>PLANES DE AFILIACIÓN</h1>
-</div>
-
-<div
-  fxLayout="row"
-  fxLayout.xs="column"
-  fxLayoutAlign="center start"
-  fxLayoutGap="20px"
-  class="socios"
->
-  <div fxFlex="30%"  >
-    <mat-card >
-      <mat-card-header >
-        <mat-card-title>PAQUETE EMPRENDEDOR</mat-card-title>
-        <mat-card-subtitle style="text-align: center;">$ 4,500.00</mat-card-subtitle>
-      </mat-card-header>
-      <img matCardImage src="../../../../../assets/img/afiliacion/upaep.png" />
-      <mat-card-content>
-        <mat-list dense>
-          
-          <div fxLayout fxFlexAlign="center center">
-            
-            <mat-icon class="mat-18" color = "warn">stars</mat-icon>
-
-            <mat-list-item>
-              
-              <p>
-                Asesorias (Laboral, Fiscal, Eléctrica y Legal).
-              </p>
-                
-                            
-            </mat-list-item>
-            <mat-divider></mat-divider>
-          </div>
-
-          <div fxLayout fxFlexAlign="center center">
-            <mat-icon class="mat-18" color = "warn">stars</mat-icon>
-            <mat-list-item>
-              <p>
-                Acompañamiento ante dependencias Gubernamentales.
-              </p>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-          </div>
-
-          <div fxLayout fxFlexAlign="center center">
-            <mat-icon class="mat-18" color = "warn">stars</mat-icon>
-            <mat-list-item> 
-              <p>
-                Becas Universitarias.
-              </p>  
-            </mat-list-item>
-            <mat-divider></mat-divider>
-          </div>
-
-          <div fxLayout fxFlexAlign="center center">
-            <mat-icon class="mat-18" color = "warn">stars</mat-icon>
-            <mat-list-item> 
-              <p>
-                Descuentos en vuelos de avión.
-              </p>  
-            </mat-list-item>
-            <mat-divider></mat-divider>
-          </div>
-
-          <div fxLayout fxFlexAlign="center center">
-            <mat-icon class="mat-18" color = "warn">stars</mat-icon>
-            <mat-list-item> 
-              <p>
-                Descuentos en hoteles City Express.
-              </p>  
-            </mat-list-item>
-            <mat-divider></mat-divider>
-          </div>
-
-          <div fxLayout fxFlexAlign="center center">
-            <mat-icon class="mat-18" color = "warn">stars</mat-icon>
-            <mat-list-item> 
-              <p>
-                Bolsa de trabajo.
-              </p>  
-            </mat-list-item>
-            <mat-divider></mat-divider>
-          </div>
-
-          <div fxLayout fxFlexAlign="center center">
-            <mat-icon class="mat-18" color = "warn">stars</mat-icon>
-            <mat-list-item> 
-              <p>
-                Vinculación académica. 
-              </p>
-            </mat-list-item>
-            
-          </div>
-        </mat-list>
-      </mat-card-content>
-    </mat-card>
-
-
-    
+        <mat-card-content>
+          <img matCardImage src="{{ socio.img }}" class="contenido-img" />
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>
+            <mat-icon class="mat-18">{{ socio.icon }}</mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
   </div>
 
-
-  <div fxFlex="30%" fxLayoutAlign="center center">
-    <mat-card>
-      <mat-card-header *ngFor="let plan of planes">
-        <mat-card-title style="margin: auto;">PAQUETE MASTER</mat-card-title>
-        <mat-card-subtitle >$ 7,500.00</mat-card-subtitle>
-      </mat-card-header>
-      <img matCardImage src="../../../../../assets/img/afiliacion/upaep.png" />
-      <mat-card-content>
-        <mat-list dense>
-
-          <div fxLayout fxFlexAlign="center center">
-            
-            <mat-icon class="mat-18" color = "warn">stars</mat-icon>
-
-            <mat-list-item>
-              
-              <p>
-                Coworking (300 horas).
-              </p>
-                
-                            
-            </mat-list-item>
-            <mat-divider></mat-divider>
-          </div>
-          
-          <div fxLayout fxFlexAlign="center center">
-            
-            <mat-icon class="mat-18" color = "warn">stars</mat-icon>
-
-            <mat-list-item>
-              
-              <p>
-                Asesorias (Laboral, Fiscal, Eléctrica y Legal).
-              </p>
-                
-                            
-            </mat-list-item>
-            <mat-divider></mat-divider>
-          </div>
-
-          <div fxLayout fxFlexAlign="center center">
-            <mat-icon class="mat-18" color = "warn">stars</mat-icon>
-            <mat-list-item>
-              <p>
-                Acompañamiento ante dependencias Gubernamentales.
-              </p>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-          </div>
-
-          <div fxLayout fxFlexAlign="center center">
-            <mat-icon class="mat-18" color = "warn">stars</mat-icon>
-            <mat-list-item> 
-              <p>
-                Becas Universitarias.
-              </p>  
-            </mat-list-item>
-            <mat-divider></mat-divider>
-          </div>
-
-          <div fxLayout fxFlexAlign="center center">
-            <mat-icon class="mat-18" color = "warn">stars</mat-icon>
-            <mat-list-item> 
-              <p>
-                Descuentos en vuelos de avión.
-              </p>  
-            </mat-list-item>
-            <mat-divider></mat-divider>
-          </div>
-
-          <div fxLayout fxFlexAlign="center center">
-            <mat-icon class="mat-18" color = "warn">stars</mat-icon>
-            <mat-list-item> 
-              <p>
-                Descuentos en hoteles City Express.
-              </p>  
-            </mat-list-item>
-            <mat-divider></mat-divider>
-          </div>
-
-          <div fxLayout fxFlexAlign="center center">
-            <mat-icon class="mat-18" color = "warn">stars</mat-icon>
-            <mat-list-item> 
-              <p>
-                Bolsa de trabajo.
-              </p>  
-            </mat-list-item>
-            <mat-divider></mat-divider>
-          </div>
-
-          <div fxLayout fxFlexAlign="center center">
-            <mat-icon class="mat-18" color = "warn">stars</mat-icon>
-            <mat-list-item> 
-              <p>
-                Vinculación académica. 
-              </p>
-            </mat-list-item>
-            
-          </div>
-        </mat-list>
-      </mat-card-content>
-    </mat-card>
-
-
-    
+  <div FxLayout fxFlexAlign="center center">
+    <h1>PLANES DE AFILIACIÓN</h1>
   </div>
 
+  <div
+    fxLayout="row wrap"
+    fxLayout.xs="column"
+    fxLayout.md="35%"
+    fxLayout.lg="30%"
+    fxLayoutAlign="center start"
+    fxLayoutGap="20px"
+    class="socios"
+  >
+    <div fxLayoutAlign="center center">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title class="planes">PAQUETE EMPRENDEDOR</mat-card-title>
+          <mat-card-subtitle class="planes">$ 4,500.00</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          matCardImage
+          src="../../../../../assets/img/afiliacion/plan3.png"
+          class="plan"
+        />
+        <mat-card-content>
+          <mat-list dense>
+            <div fxLayout fxFlexAlign="center center">
+              <mat-icon class="mat-18" color="warn">stars</mat-icon>
 
-  <div fxFlex="30%" fxLayoutAlign="center center">
-    <mat-card>
-      <mat-card-header *ngFor="let plan of planes">
-        <mat-card-title>PAQUETE EMPRENDEDOR</mat-card-title>
-        <mat-card-subtitle style="text-align: center;">$ 4,500.00</mat-card-subtitle>
-      </mat-card-header>
-      <img matCardImage src="../../../../../assets/img/afiliacion/upaep.png" />
-      <mat-card-content>
-        <mat-list dense>
+              <mat-list-item>
+                <p>Asesorias (Laboral, Fiscal, Eléctrica y Legal).</p>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </div>
 
-          <div fxLayout fxFlexAlign="center center">
-            
-            <mat-icon class="mat-18" color = "warn">stars</mat-icon>
+            <div fxLayout fxFlexAlign="center center">
+              <mat-icon class="mat-18" color="warn">stars</mat-icon>
+              <mat-list-item>
+                <p>Acompañamiento ante dependencias Gubernamentales.</p>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </div>
 
-            <mat-list-item>
-              
-              <p>
-                Cursos.
-              </p>
-                
-                            
-            </mat-list-item>
-            <mat-divider></mat-divider>
-          </div>
+            <div fxLayout fxFlexAlign="center center">
+              <mat-icon class="mat-18" color="warn">stars</mat-icon>
+              <mat-list-item>
+                <p>Becas Universitarias.</p>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </div>
 
-          <div fxLayout fxFlexAlign="center center">
-            
-            <mat-icon class="mat-18" color = "warn">stars</mat-icon>
+            <div fxLayout fxFlexAlign="center center">
+              <mat-icon class="mat-18" color="warn">stars</mat-icon>
+              <mat-list-item>
+                <p>Descuentos en vuelos de avión.</p>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </div>
 
-            <mat-list-item>
-              
-              <p>
-                Coworking (Ilimitado).
-              </p>
-                
-                            
-            </mat-list-item>
-            <mat-divider></mat-divider>
-          </div>
-          
-          <div fxLayout fxFlexAlign="center center">
-            
-            <mat-icon class="mat-18" color = "warn">stars</mat-icon>
+            <div fxLayout fxFlexAlign="center center">
+              <mat-icon class="mat-18" color="warn">stars</mat-icon>
+              <mat-list-item>
+                <p>Descuentos en hoteles City Express.</p>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </div>
 
-            <mat-list-item>
-              
-              <p>
-                Asesorias (Laboral, Fiscal, Eléctrica y Legal).
-              </p>
-                
-                            
-            </mat-list-item>
-            <mat-divider></mat-divider>
-          </div>
+            <div fxLayout fxFlexAlign="center center">
+              <mat-icon class="mat-18" color="warn">stars</mat-icon>
+              <mat-list-item>
+                <p>Bolsa de trabajo.</p>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </div>
 
-          <div fxLayout fxFlexAlign="center center">
-            <mat-icon class="mat-18" color = "warn">stars</mat-icon>
-            <mat-list-item>
-              <p>
-                Acompañamiento ante dependencias Gubernamentales.
-              </p>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-          </div>
+            <div fxLayout fxFlexAlign="center center">
+              <mat-icon class="mat-18" color="warn">stars</mat-icon>
+              <mat-list-item>
+                <p>Vinculación académica.</p>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </div>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+    </div>
 
-          <div fxLayout fxFlexAlign="center center">
-            <mat-icon class="mat-18" color = "warn">stars</mat-icon>
-            <mat-list-item> 
-              <p>
-                Becas Universitarias.
-              </p>  
-            </mat-list-item>
-            <mat-divider></mat-divider>
-          </div>
+    <div fxLayoutAlign="center center">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title class="planes">PAQUETE MASTER</mat-card-title>
+          <mat-card-subtitle class="planes">$ 7,500.00</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          matCardImage
+          src="../../../../../assets/img/afiliacion/plan1.png"
+          class="plan"
+        />
+        <mat-card-content>
+          <mat-list dense>
+            <div fxLayout fxFlexAlign="center center">
+              <mat-icon class="mat-18" color="warn">stars</mat-icon>
 
-          <div fxLayout fxFlexAlign="center center">
-            <mat-icon class="mat-18" color = "warn">stars</mat-icon>
-            <mat-list-item> 
-              <p>
-                Descuentos en vuelos de avión.
-              </p>  
-            </mat-list-item>
-            <mat-divider></mat-divider>
-          </div>
+              <mat-list-item>
+                <p>Coworking (300 horas).</p>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </div>
 
-          <div fxLayout fxFlexAlign="center center">
-            <mat-icon class="mat-18" color = "warn">stars</mat-icon>
-            <mat-list-item> 
-              <p>
-                Descuentos en hoteles City Express.
-              </p>  
-            </mat-list-item>
-            <mat-divider></mat-divider>
-          </div>
+            <div fxLayout fxFlexAlign="center center">
+              <mat-icon class="mat-18" color="warn">stars</mat-icon>
 
-          <div fxLayout fxFlexAlign="center center">
-            <mat-icon class="mat-18" color = "warn">stars</mat-icon>
-            <mat-list-item> 
-              <p>
-                Bolsa de trabajo.
-              </p>  
-            </mat-list-item>
-            <mat-divider></mat-divider>
-          </div>
+              <mat-list-item>
+                <p>Asesorias (Laboral, Fiscal, Eléctrica y Legal).</p>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </div>
 
-          <div fxLayout fxFlexAlign="center center">
-            <mat-icon class="mat-18" color = "warn">stars</mat-icon>
-            <mat-list-item> 
-              <p>
-                Vinculación académica. 
-              </p>
-            </mat-list-item>
-            
-          </div>
+            <div fxLayout fxFlexAlign="center center">
+              <mat-icon class="mat-18" color="warn">stars</mat-icon>
+              <mat-list-item>
+                <p>Acompañamiento ante dependencias Gubernamentales.</p>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </div>
 
-          <div fxLayout fxFlexAlign="center center">
-            
-            <mat-icon class="mat-18" color = "warn">stars</mat-icon>
+            <div fxLayout fxFlexAlign="center center">
+              <mat-icon class="mat-18" color="warn">stars</mat-icon>
+              <mat-list-item>
+                <p>Becas Universitarias.</p>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </div>
 
-            <mat-list-item>
-              
-              <p>
-                Presencia de marca.
-              </p>
-                
-                            
-            </mat-list-item>
-            <mat-divider></mat-divider>
-          </div>
+            <div fxLayout fxFlexAlign="center center">
+              <mat-icon class="mat-18" color="warn">stars</mat-icon>
+              <mat-list-item>
+                <p>Descuentos en vuelos de avión.</p>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </div>
 
-          <div fxLayout fxFlexAlign="center center">
-            
-            <mat-icon class="mat-18" color = "warn">stars</mat-icon>
+            <div fxLayout fxFlexAlign="center center">
+              <mat-icon class="mat-18" color="warn">stars</mat-icon>
+              <mat-list-item>
+                <p>Descuentos en hoteles City Express.</p>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </div>
 
-            <mat-list-item>
-              
-              <p>
-                presidir comisiones.
-              </p>
-                
-                            
-            </mat-list-item>
-            <mat-divider></mat-divider>
-          </div>
+            <div fxLayout fxFlexAlign="center center">
+              <mat-icon class="mat-18" color="warn">stars</mat-icon>
+              <mat-list-item>
+                <p>Bolsa de trabajo.</p>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </div>
 
-          <div fxLayout fxFlexAlign="center center">
-            
-            <mat-icon class="mat-18" color = "warn">stars</mat-icon>
+            <div fxLayout fxFlexAlign="center center">
+              <mat-icon class="mat-18" color="warn">stars</mat-icon>
+              <mat-list-item>
+                <p>Vinculación académica.</p>
+              </mat-list-item>
 
-            <mat-list-item>
-              
-              <p>
-                Publicidad en página web.
-              </p>
-                
-                            
-            </mat-list-item>
-            <mat-divider></mat-divider>
-          </div>
-        </mat-list>
-      </mat-card-content>
-    </mat-card>
+              <mat-divider></mat-divider>
+            </div>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+    </div>
 
+    <div fxLayoutAlign="center center">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title class="planes">PAQUETE PATROCINADOR</mat-card-title>
+          <mat-card-subtitle class="planes">$ 9,500.00</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          matCardImage
+          src="../../../../../assets/img/afiliacion/plan2.png"
+          class="plan"
+        />
+        <mat-card-content>
+          <mat-list dense>
+            <div fxLayout fxFlexAlign="center center">
+              <mat-icon class="mat-18" color="warn">stars</mat-icon>
 
-    
+              <mat-list-item>
+                <p>Cursos.</p>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </div>
+
+            <div fxLayout fxFlexAlign="center center">
+              <mat-icon class="mat-18" color="warn">stars</mat-icon>
+
+              <mat-list-item>
+                <p>Coworking (Ilimitado).</p>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </div>
+
+            <div fxLayout fxFlexAlign="center center">
+              <mat-icon class="mat-18" color="warn">stars</mat-icon>
+
+              <mat-list-item>
+                <p>Asesorias (Laboral, Fiscal, Eléctrica y Legal).</p>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </div>
+
+            <div fxLayout fxFlexAlign="center center">
+              <mat-icon class="mat-18" color="warn">stars</mat-icon>
+              <mat-list-item>
+                <p>Acompañamiento ante dependencias Gubernamentales.</p>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </div>
+
+            <div fxLayout fxFlexAlign="center center">
+              <mat-icon class="mat-18" color="warn">stars</mat-icon>
+              <mat-list-item>
+                <p>Becas Universitarias.</p>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </div>
+
+            <div fxLayout fxFlexAlign="center center">
+              <mat-icon class="mat-18" color="warn">stars</mat-icon>
+              <mat-list-item>
+                <p>Descuentos en vuelos de avión.</p>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </div>
+
+            <div fxLayout fxFlexAlign="center center">
+              <mat-icon class="mat-18" color="warn">stars</mat-icon>
+              <mat-list-item>
+                <p>Descuentos en hoteles City Express.</p>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </div>
+
+            <div fxLayout fxFlexAlign="center center">
+              <mat-icon class="mat-18" color="warn">stars</mat-icon>
+              <mat-list-item>
+                <p>Bolsa de trabajo.</p>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </div>
+
+            <div fxLayout fxFlexAlign="center center">
+              <mat-icon class="mat-18" color="warn">stars</mat-icon>
+              <mat-list-item>
+                <p>Vinculación académica.</p>
+              </mat-list-item>
+
+              <mat-divider></mat-divider>
+            </div>
+
+            <div fxLayout fxFlexAlign="center center">
+              <mat-icon class="mat-18" color="warn">stars</mat-icon>
+
+              <mat-list-item>
+                <p>Presencia de marca.</p>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </div>
+
+            <div fxLayout fxFlexAlign="center center">
+              <mat-icon class="mat-18" color="warn">stars</mat-icon>
+
+              <mat-list-item>
+                <p>presidir comisiones.</p>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </div>
+
+            <div fxLayout fxFlexAlign="center center">
+              <mat-icon class="mat-18" color="warn">stars</mat-icon>
+
+              <mat-list-item>
+                <p>Publicidad en página web.</p>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </div>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+    </div>
   </div>
 </div>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-

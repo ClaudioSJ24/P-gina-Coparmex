@@ -8,22 +8,28 @@ import { RouterModule, Routes } from '@angular/router';
 import { YouTubePlayerModule } from "@angular/youtube-player";
 
 import { InicioComponent } from './components/inicio/inicio.component';
+import { CarrouselSComponent } from './components/carrousel-s/carrousel-s.component';
+import { FooterComponent } from './components/footer/footer.component';
+
 
 
 
 
 @NgModule({
-  declarations: [SideNavComponent, InicioComponent],
+  declarations: [SideNavComponent, InicioComponent, CarrouselSComponent, FooterComponent],
   imports: [
     CommonModule,
     RouterModule,
     MaterialUiModule,
     FlexLayoutModule ,
     IvyCarouselModule,
-    YouTubePlayerModule 
+    YouTubePlayerModule
+    
+     
   ],
   exports: [
-    SideNavComponent
+    SideNavComponent,
+    CarrouselSComponent
   ]
 })
 export class SharedModule { }

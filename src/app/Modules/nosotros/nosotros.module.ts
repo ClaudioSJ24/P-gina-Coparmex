@@ -9,6 +9,7 @@ import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { MaterialUiModule } from '../material-ui/material-ui.module';
 
 
+
 @NgModule({
   declarations: [
    NosotrosComponent
@@ -18,7 +19,8 @@ import { MaterialUiModule } from '../material-ui/material-ui.module';
     NosotrosRoutingModule,
     FlexLayoutModule,
     IvyCarouselModule,
-    MaterialUiModule
+    MaterialUiModule,
+    
   ]
 })
 export class NosotrosModule { }

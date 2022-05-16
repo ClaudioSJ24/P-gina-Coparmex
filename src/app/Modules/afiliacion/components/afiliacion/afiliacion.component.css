@@ -1,7 +1,7 @@
 .grid-item {
-    background-color: lightsalmon;
+    /*background-color: lightsalmon;*/
     border-radius: 5px;
-    padding: 10px;
+    
     height: 100px;
   }
 
@@ -25,7 +25,13 @@ h1{
 
 mat-card{
   margin-top: 10px;
-    
+  
+}
+
+.plan{
+  width: 150px;
+  height: 150px;
+  margin:  20px auto;
 }
 
 .parrafo{
@@ -54,8 +60,16 @@ mat-card-content{
   margin: auto;
 }
 
+
+
 .mat-18{
   
   
-  margin: auto 20px;
+  margin: auto auto;
+}
+
+.planes{
+  text-align: center;
+  margin:  auto auto ;
+  font-size: 1.2rem;
 }

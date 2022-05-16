@@ -5,11 +5,16 @@
     </button>
     <span class="spacer"></span>
         <img  src="./assets/img/logos/coparmex3.png" id = "logoToolbar">
+
     <span class="spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>facebook</mat-icon>
-        
+
+    <button mat-icon-button >
+        <mat-icon>facebook</mat-icon>        
     </button>
+
+    
+
+
 
   
   </mat-toolbar-row>
@@ -49,6 +54,11 @@
   <mat-sidenav-content>
     
     <!-- Add Content Here -->
-    <router-outlet></router-outlet>
+    <router-outlet>
+      
+    </router-outlet>
+    <br>
+    
+    <app-footer></app-footer>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -208,17 +208,7 @@ export class AfiliacionComponent implements OnInit {
       }
     ]
 
-    this.planes = [
-
-      {
-
-        title: "PAQUETE EMPRENDEDOR",
-        subtitle: "$ 4,500.00",
-        imgs: "../../../../../assets/img/afiliacion/upaep.png"
-        
-        
-      }
-    ]
+    
 
   
   }
