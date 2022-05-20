@@ -2,6 +2,20 @@
     padding: 5px;
     width: 50%;
   }
+
+  .imagen{
+      position: relative;
+      display: inline-block;
+      text-align: center;
+  }
+
+  .centrar{
+      position: absolute;
+      font-size: 2.5rem;
+      color: var(--third);
+      top: 4.7%;
+      left: 5%;
+  }
   
   .grid-item {
     /*background-color: lightsalmon;*/

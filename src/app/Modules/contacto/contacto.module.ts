@@ -1,17 +1,23 @@
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ContactoRoutingModule } from './contacto-routing.module';
-import { ContactoCComponent } from './components/contacto-c/contacto-c.component';
+
+import { ContactoComponent } from './components/contacto/contacto.component';
+import { MaterialUiModule } from '../material-ui/material-ui.module';
 
 
 @NgModule({
   declarations: [
-    ContactoCComponent
+    
+    ContactoComponent
   ],
   imports: [
     CommonModule,
-    ContactoRoutingModule
+    ContactoRoutingModule,
+    FlexLayoutModule,
+    MaterialUiModule
   ]
 })
 export class ContactoModule { }
