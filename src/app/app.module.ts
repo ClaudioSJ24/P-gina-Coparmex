@@ -8,6 +8,7 @@ import { SharedModule } from './Modules/shared/shared.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
+
 @NgModule({
   declarations: [
     AppComponent

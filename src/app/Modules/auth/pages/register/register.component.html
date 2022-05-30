@@ -1,0 +1,96 @@
+
+
+<form class="example-form" [formGroup]="formControl">
+
+    <img src="../../../../../assets/img/login/logot.png" width="30px" height="35px" style="margin: auto 40%; text-align: center;">
+
+    <strong style="margin: 20px 35%; text-align: center;">Registro</strong>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input
+        type="text"
+        matInput
+        formControlName="name"
+        
+        placeholder="Ingresar Nombre"
+        
+      />
+      <mat-error
+        *ngIf="
+          this.formControl.get('name')?.hasError('pattern') &&
+          !this.formControl.get('name')?.hasError('required')
+        "
+      >
+        <span>Ingresar Nombre Valido</span>
+      </mat-error>
+      <mat-error *ngIf="this.formControl.get('name')?.hasError('required')">
+        Campo <strong>obligatorio</strong>
+      </mat-error>
+      
+      
+    </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Correo</mat-label>
+    <input
+      matInput
+      formControlName="email"
+      placeholder="Ex. pat@example.com"
+      
+    />
+    <mat-error
+      *ngIf="
+        this.formControl.get('email')?.hasError('email') &&
+        !this.formControl.get('email')?.hasError('required')
+      "
+    >
+      <span>Ingresar correo valido</span>
+    </mat-error>
+    <mat-error *ngIf="this.formControl.get('email')?.hasError('required')">
+      Campo <strong>obligatorio</strong>
+    </mat-error>
+    
+    
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Contraseña</mat-label>
+    <input
+      matInput
+      formControlName="password"
+      placeholder="Minimo 6 caracteres"
+      
+    />
+    <mat-error
+      *ngIf="
+        this.formControl.get('password')?.hasError('minlength') &&
+        !this.formControl.get('password')?.hasError('required')
+      "
+    >
+    
+      Ingresar contraseña Valida
+    </mat-error>
+    <mat-error *ngIf="this.formControl.get('password')?.hasError('required')">
+      Campo <strong>obligatorio</strong>
+    </mat-error>
+    
+    
+  </mat-form-field>
+  
+
+    <button mat-stroked-button color="warn" style="margin: auto 25%;" >Registro</button>
+
+    
+   
+  
+</form>
+
+<p>¿Ya tienes una cuenta? </p> 
+
+    <a mat-button routerLink="auth/sesion" routerLinkActive="router-link-active" color="accent"  (click)="openDialogS()" mat-dialog-close>Iniciar Sesion</a>
+
+    
+  
+
+
+

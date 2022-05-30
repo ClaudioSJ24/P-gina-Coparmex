@@ -39,7 +39,7 @@ export class AfiliacionComponent implements OnInit {
         
       },
       {
-        img: "../../../../../assets/img/afiliacion/campo.jpg",
+        img: "../../../../../assets/img/afiliacion/campo.png",
        
       },
       {
@@ -51,7 +51,7 @@ export class AfiliacionComponent implements OnInit {
        
       },
       {
-        img: "../../../../../assets/img/afiliacion/COMEX.png",
+        img: "../../../../../assets/img/afiliacion/logoSit.png",
         
       },
       {
@@ -167,7 +167,7 @@ export class AfiliacionComponent implements OnInit {
         
       },
       {
-        img: "../../../../../assets/img/afiliacion/surpriz.jpg",
+        img: "../../../../../assets/img/afiliacion/supriz.jpg",
         
       },
       {

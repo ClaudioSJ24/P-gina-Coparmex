@@ -12,13 +12,16 @@ import { CarrouselSComponent } from './components/carrousel-s/carrousel-s.compon
 import { FooterComponent } from './components/footer/footer.component';
 import { FontAsoweModule } from '../font-asowe/font-asowe.module';
 import { RedesSComponent } from './components/redes-s/redes-s.component';
+import { LoginComponent } from './components/login/login.component';
+import { AuthModule } from '../auth/auth.module';
+
 
 
 
 
 
 @NgModule({
-  declarations: [SideNavComponent, InicioComponent, CarrouselSComponent, FooterComponent, RedesSComponent],
+  declarations: [SideNavComponent, InicioComponent, CarrouselSComponent, FooterComponent, RedesSComponent, LoginComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -26,13 +29,15 @@ import { RedesSComponent } from './components/redes-s/redes-s.component';
     FlexLayoutModule ,
     IvyCarouselModule,
     YouTubePlayerModule,
-    FontAsoweModule
+    FontAsoweModule,
+    AuthModule
     
      
   ],
   exports: [
     SideNavComponent,
     CarrouselSComponent
+    
   ]
 })
 export class SharedModule { }

@@ -1,0 +1,34 @@
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon >account_circle</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+
+    <button mat-menu-item (click)="openDialogR()">
+        <mat-icon color="warn">person_add</mat-icon>
+        
+       <a routerLink="auth/registro" routerLinkActive="router-link-active" >Registro</a>
+        
+    </button>
+    
+    <button mat-menu-item (click) = "openDialogL()"> 
+      <mat-icon color="warn">perm_identity</mat-icon>
+      
+     <a routerLink="auth/sesion" routerLinkActive="router-link-active" >Iniciar Sesión</a> 
+          
+    </button>
+
+    <button mat-menu-item>
+        <mat-icon color="warn">exit_to_app</mat-icon>
+       <a routerLink="" routerLinkActive="router-link-active" >Salir </a>        
+    </button>
+
+        
+    
+  </mat-menu>
+  <!--Router que permite acceder a  ruta auth/registro o sesion la ruta auth-> mainCComponente-->
+  <router-outlet name='login'>
+      
+  </router-outlet>
+
+  
+  

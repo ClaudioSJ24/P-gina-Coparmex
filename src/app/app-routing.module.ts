@@ -1,7 +1,9 @@
+import { ProtectedModule } from './Modules/protected/protected.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ContactoModule } from '../app/Modules/contacto/contacto.module';
 import { InicioComponent } from './Modules/shared/components/inicio/inicio.component';
+import { MainCComponent } from './Modules/auth/pages/main-c/main-c.component';
 
 
 const routes: Routes = [
@@ -30,7 +32,20 @@ const routes: Routes = [
   {
     path: 'contacto',
     loadChildren: () => import('../app/Modules/contacto/contacto.module').then(m => ContactoModule)
+  },
+  {
+    path: 'auth',
+    component:MainCComponent,
+    
+    loadChildren: () => import('../app/Modules/auth/auth.module').then(m => m.AuthModule)
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('../app/Modules/protected/protected.module').then(m => m.ProtectedModule)
   }
+
+
+
 ];
 
 
