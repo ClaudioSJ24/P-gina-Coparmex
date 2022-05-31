@@ -1,6 +1,6 @@
 
 
-<form class="example-form" [formGroup]="formControl">
+<form class="example-form" [formGroup]="formControl" (ngSubmit)="register()">
 
     <img src="../../../../../assets/img/login/logot.png" width="30px" height="35px" style="margin: auto 40%; text-align: center;">
 
@@ -78,7 +78,7 @@
   </mat-form-field>
   
 
-    <button mat-stroked-button color="warn" style="margin: auto 25%;" >Registro</button>
+    <button mat-stroked-button color="warn" style="margin: auto 25%;" [disabled]="this.formControl.invalid" (click)="onNoClick()">Registro</button>
 
     
    
