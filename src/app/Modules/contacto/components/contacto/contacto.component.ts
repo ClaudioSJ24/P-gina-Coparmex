@@ -5,11 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './contacto.component.html',
   styleUrls: ['./contacto.component.css']
 })
-export class ContactoComponent implements OnInit {
+export class ContactoComponent  {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  onClick(): void{
+    console.log('omitir refresh del boton gracias al modulo FormModule y a la directiva ngSubmit')
   }
 
 }

@@ -128,15 +128,81 @@
 
   <app-carrousel-s></app-carrousel-s>
 
+  <h1>BENEFICIOS</h1>
+
   
 
+  <div fxFlex="25%" fxFlex fxLayoutAlign="center center" class="block-3">
+    <div fxFlex fxLayoutAlign="center center" fxFlexFill class="grid-item">
+      <div fxLayout = "column" >
+        <h2>Representatividad</h2>
+        <p class="texto">
+          Impulso y gestión de temas ante las autoridades y organismos  municipales y estatales en beneficio del desarrollo del ecosistema empresarial así como temas de impacto político, social y económico para impulsar el bien común.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div fxFlex="25%" fxFlex fxLayoutAlign="center center" class="block-3">
+    <div fxFlex fxLayoutAlign="center center" fxFlexFill class="grid-item">
+      <div fxLayout = "column" >
+        <h2>Oportunidad de vínculo, participación y aportación</h2>
+
+        <p class="texto">
+          Los representantes de las empresas pueden lograr un vínculo y relaciones con otros empresarios y actores locales a través de los diferentes eventos, así como la oportunidad de participar en las  Comisiones de Trabajo que el Centro Empresarial tenga para impulsar alguna propuesta o iniciativa en particular.        
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div fxFlex="25%" fxFlex fxLayoutAlign="center center" class="block-3">
+    <div fxFlex fxLayoutAlign="center center" fxFlexFill class="grid-item">
+      <div fxLayout = "column" >
+        <h2>Servicios directos para el apoyo a la operatividad y competitividad de la empresa</h2>
+      <p class="texto">
+        Conforme a las necesidades de los socios de cada Centro Empresarial se ofrecen servicios concretos con tarifa preferencial  como: capacitaciones, asesorías, bolsa de trabajo, eventos empresariales, gestión de trámites, entre otros. 
+      </p>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <H1>CONVENIOS NACIONALES</H1>
+  <div
+    fxLayout="row wrap"
+    fxLayout.xs="column"
+    fxLayoutAlign="center center"
+    fxLayoutGap="10px"
+  >
+    <div
+      fxFlex="15%"
+      fxFlex.sm="25%"
+      fxFlex.lg="20%"
+      fxLayoutAlign="center center"
+      *ngFor="let convenio of convenios"
+    >
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title ></mat-card-title>
+          <mat-card-subtitle ></mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+          <img matCardImage src="{{ convenio.imagen }}" class="contenido-img" />
+        </mat-card-content>
+        
+      </mat-card>
+    </div>
+  </div>
+
   <h1>COMISIONES DE TRABAJO</h1>
-  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxFlex="50%" class="block-2">
+  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxFlex="50%" class="block-5">
     <div fxFlex  fxLayoutAlign="start start" 
       fxFlexFill class="grid-item">
 
       <div fxLayout fxFlexAlign="center center">
-        <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+        <mat-icon style="color: var(--third); margin-right: 10px;">done_outline</mat-icon>
         <p class="texto">Comisión de mujeres embarazadas</p>
         <br>
       </div>
@@ -144,7 +210,7 @@
     <div fxFlex="33%" fxLayoutAlign="start start"  
       fxFlexFill class="grid-item">
       <div fxLayout fxFlexAlign="center center">
-        <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+        <mat-icon style="color: var(--third); margin-right: 10px;">done_outline</mat-icon>
         <p class="texto">Comisión de industria de calzado</p>
         <br>
       </div>  
@@ -154,7 +220,7 @@
       fxFlexFill class="grid-item">
 
       <div fxLayout fxFlexAlign="center center">
-        <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+        <mat-icon style="color: var(--third); margin-right: 10px;">done_outline</mat-icon>
         <p class="texto">Comisión de vivienda</p>
         <br>
       </div>
@@ -167,7 +233,7 @@
       fxFlexFill class="grid-item">
 
       <div fxLayout fxFlexAlign="center center">
-        <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+        <mat-icon style="color: var(--third); margin-right: 10px;">done_outline</mat-icon>
         <p class="texto">Comisión fiscal</p>
         <br>
       </div>
@@ -175,7 +241,7 @@
     <div fxFlex="33%" fxLayoutAlign="start start"  
       fxFlexFill class="grid-item">
       <div fxLayout fxFlexAlign="center center">
-        <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+        <mat-icon style="color: var(--third); margin-right: 10px;">done_outline</mat-icon>
         <p class="texto">Comisión de justicia</p>
         <br>
       </div>  
@@ -185,7 +251,7 @@
       fxFlexFill class="grid-item">
 
       <div fxLayout fxFlexAlign="center center">
-        <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+        <mat-icon style="color: var(--third); margin-right: 10px;">done_outline</mat-icon>
         <p class="texto">Comisión de empresarios jovenes</p>
         <br>
       </div>
@@ -197,7 +263,7 @@
     <div fxFlex  fxLayoutAlign="start start"  
       fxFlexFill class="grid-item">
         <div fxLayout fxFlexAlign="center center">
-            <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+          <mat-icon style="color: var(--third); margin-right: 10px;">done_outline</mat-icon>
             <p class="texto">Comisión de energia </p>
             <br>
         </div>
@@ -207,7 +273,7 @@
       fxFlexFill class="grid-item">
       
       <div fxLayout fxFlexAlign="center center">
-        <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+        <mat-icon style="color: var(--third); margin-right: 10px;">done_outline</mat-icon>
         <p class="texto">Comisión de negocios y financiamiento</p> 
         <br>
       </div>
@@ -217,7 +283,7 @@
       fxFlexFill class="grid-item">
 
       <div fxLayout fxFlexAlign="center center">
-        <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+        <mat-icon style="color: var(--third); margin-right: 10px;">done_outline</mat-icon>
         <p class="texto">Comisión de capacitación</p>
         <br>
       </div>
@@ -231,7 +297,7 @@
       fxFlexFill class="grid-item">
 
       <div fxLayout fxFlexAlign="center center">
-        <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+        <mat-icon style="color: var(--third); margin-right: 10px;">done_outline</mat-icon>
         <p class="texto">Comisión laboral y de capital humano</p>
         <br>
       </div>
@@ -241,7 +307,7 @@
       fxFlexFill class="grid-item">
       
       <div fxLayout fxFlexAlign="center center">
-        <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+        <mat-icon style="color: var(--third); margin-right: 10px;">done_outline</mat-icon>
         <p class="texto">Comisión de seguridad social y salud</p>
         <br>
       </div>
@@ -251,7 +317,7 @@
       fxFlexFill class="grid-item">
 
       <div fxLayout fxFlexAlign="center center">
-        <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+        <mat-icon style="color: var(--third); margin-right: 10px;">done_outline</mat-icon>
         <p class="texto">Comisión de educación</p>
         <br>
       </div>
@@ -265,7 +331,7 @@
       fxFlexFill class="grid-item">
         <div fxLayout fxFlexAlign="center center">
 
-            <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+          <mat-icon style="color: var(--third); margin-right: 10px;">done_outline</mat-icon>
             <p class="texto">Comisión de innovación empresarial</p>
             <br>
         </div>
@@ -274,7 +340,7 @@
     <div fxFlex="33%" fxLayoutAlign="start start"  
       fxFlexFill class="grid-item">
       <div fxLayout fxFlexAlign="center center">
-        <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+        <mat-icon style="color: var(--third); margin-right: 10px;">done_outline</mat-icon>
         <p class="texto">Comisión de desarrollo económico y regional</p> 
         <br>
       </div> 
@@ -284,7 +350,7 @@
       fxFlexFill class="grid-item">
 
       <div fxLayout fxFlexAlign="center center">
-        <img src="../../../../../assets/img/beneficios/aceptacion.png" alt="" class="aceptacion">
+        <mat-icon style="color: var(--third); margin-right: 10px;">done_outline</mat-icon>
         <p class="texto">Comisión de medio ambiente</p>
         <br>
       </div>

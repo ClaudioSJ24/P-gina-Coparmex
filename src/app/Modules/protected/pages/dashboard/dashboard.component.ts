@@ -22,7 +22,6 @@ export class DashboardComponent  {
     this.router.navigate(['auth/sesion'])
     this.dialogL()
   }
-
   
 
 }

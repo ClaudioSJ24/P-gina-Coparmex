@@ -6,6 +6,7 @@ import { ContactoRoutingModule } from './contacto-routing.module';
 
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { MaterialUiModule } from '../material-ui/material-ui.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { MaterialUiModule } from '../material-ui/material-ui.module';
     CommonModule,
     ContactoRoutingModule,
     FlexLayoutModule,
-    MaterialUiModule
+    MaterialUiModule,
+    FormsModule
   ]
 })
 export class ContactoModule { }

@@ -9,6 +9,7 @@ export class BeneficiosCComponent implements OnInit {
 
 
   content!: Array<any>;
+  convenios!: Array<any>;
   constructor() { }
 
   ngOnInit(): void {
@@ -49,6 +50,122 @@ export class BeneficiosCComponent implements OnInit {
       {
         imagen: "../../../../../assets/img/beneficios/asesoria.png",
         description:"Servicios Contables"
+      }
+
+    ]
+
+    this.convenios = [
+      {
+        imagen: "../../../../../assets/img/convenios/aeromexico.jpg",
+        name: "Aeromexico",
+        icon: "home"
+      },
+
+      {
+        imagen: "../../../../../assets/img/convenios/alianza.png",
+        name: "Alianza Para la Educaión Superior, S.C.",
+        icon: "home"
+      },
+      {
+        imagen: "../../../../../assets/img/convenios/anahuac.png",
+        name: "Universidad Anáhua",
+        icon: "home"
+      },
+      {
+        imagen: "../../../../../assets/img/convenios/aromas.jpg",
+        name: "Mil Aromas",
+        icon: "home"
+      },
+      {
+        imagen: "../../../../../assets/img/convenios/barrera.jpg",
+        name: "Barrera México",
+        icon: "home"
+      },
+      {
+        imagen: "../../../../../assets/img/convenios/despro.jpg",
+        name: "Despro",
+        icon: "home"
+      },
+      {
+        imagen: "../../../../../assets/img/convenios/ethica.png",
+        name: "Éthica Abogados Corporativos",
+        icon: "home"
+      },
+      {
+        imagen: "../../../../../assets/img/convenios/humanitas.png",
+        name: "Universidad Humanitas",
+        icon: "home"
+      },
+      {
+        imagen: "../../../../../assets/img/convenios/iberoamericana.jpg",
+        name: "Universidad Iberoamericana",
+        icon: "home"
+      },
+      {
+        imagen: "../../../../../assets/img/convenios/ieu.png",
+        name: "Universidad",
+        icon: "home"
+      },
+      {
+        imagen: "../../../../../assets/img/convenios/intercontinental.png",
+        name: "Universidad Intercontinental",
+        icon: "home"
+      },
+      {
+        imagen: "../../../../../assets/img/convenios/latinoamericana.jpg",
+        name: "Universidad Latinoamericana",
+        icon: "home"
+      },
+      {
+        imagen: "../../../../../assets/img/convenios/medica.png",
+        name: "Médica Sur",
+        icon: "home"
+      },
+      {
+        imagen: "../../../../../assets/img/convenios/monterrey.png",
+        name: "Tecnológico de Monterrey",
+        icon: "home"
+      },
+      {
+        imagen: "../../../../../assets/img/convenios/panamericana.png",
+        name: "Universidad Panamericana",
+        icon: "home"
+      },
+      {
+        imagen: "../../../../../assets/img/convenios/ruiz.png",
+        name: "Laboratorios Ruiz",
+        icon: "home"
+      },
+      {
+        imagen: "../../../../../assets/img/convenios/sacristia.png",
+        name: "Sacristia de la Compañia",
+        icon: "home"
+      },
+      {
+        imagen: "../../../../../assets/img/convenios/salle.jpg",
+        name: "Universidad la Salle",
+        icon: "home"
+      },
+      {
+        imagen: "../../../../../assets/img/convenios/tekuno.png",
+        name: "Transformación e Innovación Digital",
+        icon: "home"
+      },
+      {
+        imagen: "../../../../../assets/img/convenios/unitec.jpg",
+        name: "Universidad Tecnológica de México",
+        icon: "home"
+      },
+
+      {
+        imagen: "../../../../../assets/img/convenios/uvm.png",
+        name: "Universidad",
+        icon: "home"
+      },
+      {
+        imagen: "../../../../../assets/img/convenios/upaep.png",
+        name: "Universidad",
+        icon: "home"
       }
 
     ]

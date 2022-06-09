@@ -26,7 +26,10 @@ h1{
 mat-card{
   margin-top: 10px;
   
+  
 }
+
+
 
 .plan{
   width: 150px;
@@ -42,14 +45,8 @@ mat-card{
 .ocultar{
   color: white;
 }
-
-mat-card-content{
-  margin: auto;
-  height: auto;
-  
-}
-
 .contenido-img{
+  
   
   height: 100px;
   
@@ -70,6 +67,6 @@ mat-card-content{
 
 .planes{
   text-align: center;
-  margin:  auto auto ;
+  margin:  auto 10px ;
   font-size: 1.2rem;
 }

@@ -1,3 +1,4 @@
+import { NameService } from './../../../../services/name.service';
 import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
@@ -10,6 +11,8 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class SideNavComponent implements OnInit {
 
+  title: String = 'INICIO';
+
   itemsMenu!: Array<any>;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
@@ -18,7 +21,7 @@ export class SideNavComponent implements OnInit {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver, public dataService: NameService) {}
   ngOnInit(): void {
     this.itemsMenu = [
 
@@ -28,7 +31,7 @@ export class SideNavComponent implements OnInit {
       {
         name: "INICIO",
         icon: "home",
-        router: ['/']
+        router: ['/'],
       },
       {
         name: "NOSOTROS",

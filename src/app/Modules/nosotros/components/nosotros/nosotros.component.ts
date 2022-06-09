@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-nosotros',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nosotros.component.css']
 })
 export class NosotrosComponent implements OnInit {
+
+  @Input()  title: String = '';
 
   imagesForSlider = [
     {path: '../../../../../assets/img/nosotros/nosotros4.png'},
@@ -15,6 +17,10 @@ export class NosotrosComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  chooseName(name: string){
+    this.title = name;
   }
 
 }

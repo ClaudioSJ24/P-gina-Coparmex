@@ -17,6 +17,18 @@
       
   }
 
+  .derechos{
+    width: 100%;
+    height: 30px;
+    background: #fafafa;
+  }
+
+  .reservados{
+    margin: auto;
+    text-decoration:underline;
+    color: var(--third)
+  }
+
   p{
     color: white;
     margin-left: 8px;

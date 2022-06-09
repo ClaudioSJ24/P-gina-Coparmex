@@ -37,7 +37,7 @@
       font-size: 2rem;
   }
   #logoh{
-      width: 70vh;
+      width: 85vh;
   }
 
   .video{
@@ -59,4 +59,12 @@
  #mapa1{
      
      width: 100%;
+ }
+
+ h1{
+     margin-left: 30px;
+ }
+
+ p{
+     margin-left: 30px;
  }

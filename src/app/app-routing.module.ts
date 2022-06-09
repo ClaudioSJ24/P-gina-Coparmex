@@ -50,7 +50,9 @@ const routes: Routes = [
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'enabled' //Permite regresar al inicio de la pagina en el momento de navegar a la misma
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
