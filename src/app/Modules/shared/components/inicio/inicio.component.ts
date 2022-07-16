@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class InicioComponent implements OnInit {
 
   imagesForSlider = [
+    
+    {path: '../../../../../assets/img/carrousel/feriaVivienda09-06-2022L.jpg'},
     {path: '../../../../../assets/img/carrousel/imagen1.jpg'},
     {path: '../../../../../assets/img/carrousel/imagen6.jpeg'},
     {path: '../../../../../assets/img/carrousel/imagen8.jpg'},

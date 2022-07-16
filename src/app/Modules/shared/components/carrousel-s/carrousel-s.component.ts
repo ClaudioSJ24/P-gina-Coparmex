@@ -12,10 +12,7 @@ export class CarrouselSComponent implements OnInit {
       path: "../../../../../assets/img/afiliacion/ado.png",
       
     },
-    /*{
-      path: "../../../../../assets/img/afiliacion/agrovida.png",
-      
-    },*/
+   
     {
       path: "../../../../../assets/img/afiliacion/amaro.jpg",
       
