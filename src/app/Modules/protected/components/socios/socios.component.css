@@ -1,0 +1,32 @@
+.container {
+  margin: auto 50px;
+  height: 200vh;
+}
+
+
+table {
+
+  display: table;
+  width: 100%;
+      
+      
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .space-button{
+    display: flex;
+    
+    flex : 1  1 auto;
+  }
+
+ 
+  td, th {
+    display: ta;
+    width: 25%;
+    
+    
+  }

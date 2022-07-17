@@ -98,6 +98,8 @@ export class Partner extends Person{
     public set event(event : Event) {
         this._event = event;
     }
+
+    
     
     
     

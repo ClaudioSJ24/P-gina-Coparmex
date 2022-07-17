@@ -5,11 +5,17 @@ import { ProtectedRoutingModule } from './protected-routing.module';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialUiModule } from '../material-ui/material-ui.module';
+import { SociosComponent } from './components/socios/socios.component';
+import { NoSociosComponent } from './components/no-socios/no-socios.component';
+import { EventosComponent } from './components/eventos/eventos.component';
 
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    DashboardComponent,
+    SociosComponent,
+    NoSociosComponent,
+    EventosComponent
   ],
   imports: [
     CommonModule,

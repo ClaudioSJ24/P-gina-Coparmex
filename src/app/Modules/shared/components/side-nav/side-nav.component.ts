@@ -1,4 +1,4 @@
-import { NameService } from './../../../../services/name.service';
+
 import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
@@ -21,7 +21,7 @@ export class SideNavComponent implements OnInit {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver, public dataService: NameService) {}
+  constructor(private breakpointObserver: BreakpointObserver) {}
   ngOnInit(): void {
     this.itemsMenu = [
 

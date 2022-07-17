@@ -13,6 +13,10 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatTableModule} from '@angular/material/table';
+
+
 
 
 const materialUi = [
@@ -20,6 +24,7 @@ const materialUi = [
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
+    MatPaginatorModule,
     MatIconModule,
     MatListModule,
     MatDialogModule,
@@ -27,7 +32,9 @@ const materialUi = [
     MatCardModule,
     MatInputModule,
     MatMenuModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatTableModule
+   
 ]
 
 @NgModule({
