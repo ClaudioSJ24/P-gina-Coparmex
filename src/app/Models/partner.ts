@@ -100,6 +100,18 @@ export class Partner extends Person{
     }
 
     
+    public get role() : Role {
+        return this._role;
+    }
+
+    
+    public set role(role : Role) {
+        this._role = role;
+    }
+    
+    
+
+    
     
     
     

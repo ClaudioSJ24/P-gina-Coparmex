@@ -1,8 +1,14 @@
-import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+
 import { MatDialog } from '@angular/material/dialog';
 import { RegisterComponent } from '../register/register.component';
-import { Router } from '@angular/router';
+
+import { AuthService } from './../../../../Services/auth.service';
+import { TokenService } from './../../../../Services/token.service';
+import { LoginDto } from './../../../../DTO/login-dto';
+
 
 
 @Component({
@@ -10,15 +16,33 @@ import { Router } from '@angular/router';
   templateUrl: './login-c.component.html',
   styleUrls: ['./login-c.component.css']
 })
-export class LoginCComponent {
+export class LoginCComponent implements OnInit {
+
+  isLogged = false;
+  isLoginFail = false;
+  loginUser!: LoginDto;
+  nameUser!: string;
+  password!:string;
+  roles: string [] = [];
+  errorM!: string;
+
 
   formControl = new FormGroup({
     
-    email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required, Validators.minLength(6)])
+    user: new FormControl('', [Validators.required]),
+    password: new FormControl('', [Validators.required])
   });
   
-  constructor(private dialog: MatDialog, private router: Router){}
+  constructor(private dialog: MatDialog, private router: Router, private tokenS: TokenService, private authA: AuthService){}
+  ngOnInit(): void {
+    if (this.tokenS.getToken()) {
+
+      this.isLogged = true;
+      this.isLoginFail = false;
+      this.roles = this.tokenS.getAutorities();
+      
+    }
+  }
 
   openDialogR():void{
     const dialogR = this.dialog.open(RegisterComponent,{
@@ -27,8 +51,31 @@ export class LoginCComponent {
   }
 
   login(){
-    console.log(this.formControl.value);
-    this.router.navigateByUrl('dashboard')
+    //console.log(this.formControl.value);
+    this.loginUser = new LoginDto (this.nameUser, this.password);
+    this.authA.login(this.loginUser).subscribe(
+      data => {
+        this.isLogged = true,
+        this.isLoginFail = false,
+
+        
+        this.tokenS.setToken(data.token);
+        this.tokenS.setUser(data.user);
+        this.tokenS.setAutorities(data.autorities);
+        this.roles = data.autorities;
+        this.router.navigateByUrl('dashboard')
+        
+
+      },
+      err => {
+        this.isLogged = false;
+        this.isLoginFail = true;
+        this.errorM = err.error.message;
+        
+        console.log(this.errorM);
+      }
+    )
+    
     
     
   }
