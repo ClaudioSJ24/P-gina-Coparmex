@@ -85,7 +85,7 @@ export class LoginCComponent implements OnInit {
   }
 
   onNoClick(){
-    this.dialog.closeAll()
+    this.router.navigateByUrl('auth/registro')
   }
 
 }

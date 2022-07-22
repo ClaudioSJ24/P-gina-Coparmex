@@ -1,13 +1,8 @@
-export class LoginDto {
+export interface LoginDto {
 
     
-    private user: string;
-    private password: string;
+    user: string;
+    password: string;
 
-    constructor(user: string, password: string){
-
-        this.user = user;
-        this.password = password;
-
-    }
+   
 }

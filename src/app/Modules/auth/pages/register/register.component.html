@@ -2,11 +2,9 @@
 
 <form class="example-form" [formGroup]="formControl" (ngSubmit)="register()">
 
-    <img src="../../../../../assets/img/login/logot.png" width="30px" height="35px" style="margin: auto 40%; text-align: center;">
+    <strong color="primary" class="registro">Registro</strong>
 
-    <strong style="margin: 20px 35%; text-align: center;">Registro</strong>
-
-    <mat-form-field class="example-full-width" appearance="fill">
+    <mat-form-field class="" appearance="fill">
       <mat-label>Nombre</mat-label>
       <input
         type="text"
@@ -78,7 +76,7 @@
   </mat-form-field>
   
 
-    <button mat-stroked-button color="warn" style="margin: auto 25%;" [disabled]="this.formControl.invalid" (click)="onNoClick()">Registro</button>
+    <button mat-raised-button color="warn" style="margin: auto 25%;" [disabled]="this.formControl.invalid" (click)="onNoClick()">Registro</button>
 
     
    
@@ -87,7 +85,7 @@
 
 <p>¿Ya tienes una cuenta? </p> 
 
-    <a mat-button routerLink="auth/sesion" routerLinkActive="router-link-active" color="accent"  (click)="openDialogS()" mat-dialog-close>Iniciar Sesion</a>
+    <a mat-button routerLinkActive="router-link-active" color="accent" (click)="onNoClick()">Iniciar Sesion</a>
 
     
   

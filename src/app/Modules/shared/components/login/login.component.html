@@ -3,14 +3,14 @@
   </button>
   <mat-menu #menu="matMenu">
 
-    <button mat-menu-item (click)="openDialogR()">
+    <button mat-menu-item >
         <mat-icon color="warn">person_add</mat-icon>
         
        <a routerLink="/auth/registro" routerLinkActive="router-link-active" >Registro</a>
         
     </button>
     
-    <button mat-menu-item (click) = "openDialogL()"> 
+    <button mat-menu-item > 
       <mat-icon color="warn">perm_identity</mat-icon>
       
      <a routerLink="/auth/sesion" routerLinkActive="router-link-active" >Iniciar Sesión</a> 
@@ -25,10 +25,7 @@
         
     
   </mat-menu>
-  <!--Router que permite acceder a  ruta auth/registro o sesion la ruta auth-> mainCComponente-->
-  <router-outlet name='login'>
-      
-  </router-outlet>
+  
 
   
   

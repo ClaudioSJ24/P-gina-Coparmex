@@ -37,7 +37,7 @@ export class RegisterComponent{
   }
 
   onNoClick(): void {
-    this.dialog.closeAll()
+    this.router.navigateByUrl('auth/sesion')
   }
 
   

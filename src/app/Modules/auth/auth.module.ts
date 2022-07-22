@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -28,7 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     FlexLayoutModule,
     ReactiveFormsModule,
     MaterialUiModule,
- 
+    
     HttpClientModule
     
   ]

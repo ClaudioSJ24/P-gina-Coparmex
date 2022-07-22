@@ -2,7 +2,7 @@ import { LoginCComponent } from 'src/app/Modules/auth/pages/login-c/login-c.comp
 import { RegisterComponent } from 'src/app/Modules/auth/pages/register/register.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginPComponent } from './pages/login-p/login-p.component';
+
 
 
 const routes: Routes = [
