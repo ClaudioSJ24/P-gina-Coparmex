@@ -1,13 +1,13 @@
 export class LoginDto {
 
     
-    private _user: string;
-    private _password: string;
+    private user: string;
+    private password: string;
 
     constructor(user: string, password: string){
 
-        this._user = user;
-        this._password = password;
+        this.user = user;
+        this.password = password;
 
     }
 }

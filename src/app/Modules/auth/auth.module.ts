@@ -5,10 +5,12 @@ import { CommonModule } from '@angular/common';
 import { AuthRoutingModule } from './auth-routing.module';
 
 import { RegisterComponent } from './pages/register/register.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormControlDirective, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialUiModule } from '../material-ui/material-ui.module';
 import { LoginCComponent } from './pages/login-c/login-c.component';
 import { MainCComponent } from './pages/main-c/main-c.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -17,8 +19,8 @@ import { MainCComponent } from './pages/main-c/main-c.component';
   declarations: [
    
     RegisterComponent,
-        LoginCComponent,
-        MainCComponent
+    LoginCComponent,
+    MainCComponent
   ],
   imports: [
     CommonModule,
@@ -26,6 +28,8 @@ import { MainCComponent } from './pages/main-c/main-c.component';
     FlexLayoutModule,
     ReactiveFormsModule,
     MaterialUiModule,
+ 
+    HttpClientModule
     
   ]
 })

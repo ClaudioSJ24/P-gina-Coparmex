@@ -20,8 +20,8 @@ export class LoginCComponent implements OnInit {
 
   isLogged = false;
   isLoginFail = false;
-  loginUser!: LoginDto;
-  nameUser!: string;
+  loginUser!: any;
+  user!: string ;
   password!:string;
   roles: string [] = [];
   errorM!: string;
@@ -33,7 +33,10 @@ export class LoginCComponent implements OnInit {
     password: new FormControl('', [Validators.required])
   });
   
-  constructor(private dialog: MatDialog, private router: Router, private tokenS: TokenService, private authA: AuthService){}
+  constructor(private dialog: MatDialog, private router: Router, private tokenS: TokenService, private authA: AuthService){
+
+    
+  }
   ngOnInit(): void {
     if (this.tokenS.getToken()) {
 
@@ -52,7 +55,7 @@ export class LoginCComponent implements OnInit {
 
   login(){
     //console.log(this.formControl.value);
-    this.loginUser = new LoginDto (this.nameUser, this.password);
+    this.loginUser = this.formControl;
     this.authA.login(this.loginUser).subscribe(
       data => {
         this.isLogged = true,
@@ -70,9 +73,10 @@ export class LoginCComponent implements OnInit {
       err => {
         this.isLogged = false;
         this.isLoginFail = true;
-        this.errorM = err.error.message;
         
-        console.log(this.errorM);
+        
+        
+        console.log('Dto error')
       }
     )
     
