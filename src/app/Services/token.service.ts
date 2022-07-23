@@ -37,8 +37,8 @@ export class TokenService {
   
   public setAutorities(autorities : string[]) {
 
-    window.sessionStorage.removeItem(AUTHORITIES_KEY);
-    window.sessionStorage.setItem(AUTHORITIES_KEY, JSON.stringify(autorities));
+    sessionStorage.removeItem(AUTHORITIES_KEY);
+    sessionStorage.setItem(AUTHORITIES_KEY, JSON.stringify(autorities));
   }
 
   
@@ -47,7 +47,7 @@ export class TokenService {
     
     if (sessionStorage.getItem(AUTHORITIES_KEY)) {
 
-      JSON.parse(sessionStorage.getItem(AUTHORITIES_KEY) || '{}').forEach((autority: { autority: string; })  => {
+      JSON.parse(sessionStorage.getItem(AUTHORITIES_KEY)!).forEach((autority: { autority: string; })  => {
 
         this.roles.push(autority.autority)        
       });

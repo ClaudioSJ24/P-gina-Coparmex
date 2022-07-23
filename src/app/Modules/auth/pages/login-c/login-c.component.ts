@@ -8,6 +8,7 @@ import { RegisterComponent } from '../register/register.component';
 import { AuthService } from './../../../../Services/auth.service';
 import { TokenService } from './../../../../Services/token.service';
 import { LoginDto } from './../../../../DTO/login-dto';
+import { JwtDto } from 'src/app/DTO/jwt-dto';
 
 
 
@@ -20,11 +21,11 @@ export class LoginCComponent implements OnInit {
 
   isLogged = false;
   isLoginFail = false;
-  loginUser!: any;
-  user!: string ;
-  password!:string;
+  
+ 
   roles: string [] = [];
   errorM!: string;
+  
 
 
   formControl = new FormGroup({
@@ -38,45 +39,28 @@ export class LoginCComponent implements OnInit {
     
   }
   ngOnInit(): void {
-    if (this.tokenS.getToken()) {
-
-      this.isLogged = true;
-      this.isLoginFail = false;
-      this.roles = this.tokenS.getAutorities();
-      
-    }
+    
   }
 
-  openDialogR():void{
-    const dialogR = this.dialog.open(RegisterComponent,{
-      width: '250px'
-    })
-  }
-
+  
   login(){
     //console.log(this.formControl.value);
-    this.loginUser = this.formControl;
-    this.authA.login(this.loginUser).subscribe(
-      data => {
+    const login = this.formControl.value
+    this.authA.login(login).subscribe(
+       res  => {
         this.isLogged = true,
         this.isLoginFail = false,
-
         
-        this.tokenS.setToken(data.token);
-        this.tokenS.setUser(data.user);
-        this.tokenS.setAutorities(data.autorities);
-        this.roles = data.autorities;
+        this.tokenS.setToken(res.token);
+        this.tokenS.setUser(res.user);
+        this.tokenS.setAutorities(res.grantedAuthorities);
+        this.roles = res.grantedAuthorities;
+        
+
         this.router.navigateByUrl('dashboard')
+        console.log( res);
         
 
-      },
-      err => {
-        this.isLogged = false;
-        this.isLoginFail = true;
-        
-        
-        
-        console.log('Dto error')
       }
     )
     
