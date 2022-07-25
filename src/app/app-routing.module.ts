@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContactoModule } from '../app/Modules/contacto/contacto.module';
 import { InicioComponent } from './Modules/shared/components/inicio/inicio.component';
 import { MainCComponent } from './Modules/auth/pages/main-c/main-c.component';
+import { GuardService as guard} from './Guards/guard.service';//Permite el acceso a determinadas rutas de acuerdo al rol
+
 
 
 const routes: Routes = [
@@ -41,7 +43,11 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    loadChildren: () => import('../app/Modules/protected/protected.module').then(m => m.ProtectedModule)
+    loadChildren: () => import('../app/Modules/protected/protected.module').then(m => m.ProtectedModule),
+    canActivate: [guard], data: {expectedRol: ['admin']} 
+    //canActivate: [guard], data: {expectedRol: ['admin', 'partner']}
+
+
   }
 
 

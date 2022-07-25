@@ -59,6 +59,10 @@ export class LoginCComponent implements OnInit {
 
         this.router.navigateByUrl('dashboard')
         console.log( res);
+        console.log(this.tokenS.getToken());
+        console.log(this.tokenS.getUser());
+        console.log(this.tokenS.getAutorities());
+        console.log(this.roles)
         
 
       }
