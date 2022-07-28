@@ -8,29 +8,32 @@ import { Role } from './role';
 
 export class Partner extends Person{
 
-    private _user: string;
-    private _company: string;
-    private _address: Address;
-    private _password: string;
-    private _dischargeDate!: Date;
-    private _updateDate!: Date;
-    private _event!: Event;
-    private _role!: Role;
+
+    
+    user: string;
+    company: string;
+    address: Address;
+    password: string;
+    dischargeDate!: Date;
+    updateDate!: Date;
+    event!: Event;
+    role!: Role;
+    partner!: string[];
 
 
-    constructor(idPerson: number, name: string, lastname: string, phone: number, email: string, passes: number, user: string, company: string, address:Address, password: string){
+    constructor(name: string, lastname: string, phone: number, email: string, passes: number, user: string, company: string, address:Address, password: string){
 
-        super(idPerson, name, lastname, phone, email,passes);
-        this._user = user;
-        this._company = company;
-        this._address = address;
-        this._password = password;
+        super(name, lastname, phone, email,passes);
+        this.user = user;
+        this.company = company;
+        this.address = address;
+        this.password = password;
 
     }
 
 
     
-    public get user() : string {
+    /*public get user() : string {
         return this._user;
     }
 
@@ -108,17 +111,9 @@ export class Partner extends Person{
     public set role(role : Role) {
         this._role = role;
     }
-    
-    
-
-    
+     
     
     
     
-    
-    
-    
-    
-    
-    
+    */
 }

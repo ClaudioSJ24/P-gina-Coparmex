@@ -1,7 +1,10 @@
+import { Partner } from 'src/app/Models/partner';
+import { PartnerService } from 'src/app/Services/partner.service';
 import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import { Router } from '@angular/router';
 
 export interface UserData {
   id: string;
@@ -48,20 +51,27 @@ const NAMES: string[] = [
   templateUrl: './socios.component.html',
   styleUrls: ['./socios.component.css']
 })
-export class SociosComponent  {
+export class SociosComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'name', 'progress', 'fruit','actions'];
-  dataSource: MatTableDataSource<UserData>;
+  ELEMENT_DATA: Partner[] = [];
+  
+
+  displayedColumns: string[] = ['id', 'name', 'lastname', 'user', 'actions'];
+  
+  dataSource = new  MatTableDataSource(this.ELEMENT_DATA)
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor() {
+  constructor(private partnerS: PartnerService, router:Router) {
     // Create 100 users
-    const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
+   //const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
 
     // Assign the data to the data source for the table to render
-    this.dataSource = new MatTableDataSource(users);
+    
+  }
+  ngOnInit(): void {
+    this.getAllPartners()
   }
 
   ngAfterViewInit() {
@@ -88,9 +98,21 @@ export class SociosComponent  {
     ///this.dataToDisplay = this.dataToDisplay.slice(0, -1);
     //this.dataSource.setData(this.dataToDisplay);
   }
+
+  getAllPartners(){
+    this.partnerS.getPartners().subscribe(
+      res => {
+        this.dataSource.data = res.partner;
+        
+        console.log('Respuesta -> '+this.dataSource)
+        
+      }
+    )
+  }
+
 }
 
-/** Builds and returns a new User. */
+/** Builds and returns a new User. 
 function createNewUser(id: number): UserData {
   const name =
     NAMES[Math.round(Math.random() * (NAMES.length - 1))] +
@@ -105,4 +127,6 @@ function createNewUser(id: number): UserData {
     fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
   };
 
-}
+}*/
+
+

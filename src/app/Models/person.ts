@@ -1,34 +1,27 @@
 export class Person {
 
 
-    private _idPerson: number;
-    private _name: string;
-    private _lastname: string;
-    private _phone: number;
-    private _email: string;
-    private _passes: number;
+    idP?: number;
+    name: string;
+    lastname: string;
+    phone: number;
+    email: string;
+    passes: number;
 
-    constructor(idPerson: number, name: string, lastname: string, phone: number, email: string, passes: number){
-        this._idPerson = idPerson
-        this._name = name
-        this._lastname = lastname
-        this._phone = phone
-        this._email = email
-        this._passes = passes
+    constructor( name: string, lastname: string, phone: number, email: string, passes: number){
+        
+        this.name = name
+        this.lastname = lastname
+        this.phone = phone
+        this.email = email
+        this.passes = passes
     }
 
 
     
-    public get id() : number {
-        return this._idPerson;
-    }
-
     
-    public set id(id : number) {
-        this._idPerson = id;
-    }
 
-    
+    /*
     public get name() : string {
         return this._name;
     }
@@ -77,6 +70,7 @@ export class Person {
     public set passes(passes : number) {
         this._passes = passes;
     }
+    */
     
     
     

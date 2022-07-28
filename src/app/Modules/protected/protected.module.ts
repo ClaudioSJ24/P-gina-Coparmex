@@ -8,6 +8,7 @@ import { MaterialUiModule } from '../material-ui/material-ui.module';
 import { SociosComponent } from './components/socios/socios.component';
 import { NoSociosComponent } from './components/no-socios/no-socios.component';
 import { EventosComponent } from './components/eventos/eventos.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { EventosComponent } from './components/eventos/eventos.component';
     CommonModule,
     ProtectedRoutingModule,
     FlexLayoutModule,
-    MaterialUiModule
+    MaterialUiModule,
+    ReactiveFormsModule
   ]
 })
 export class ProtectedModule { }

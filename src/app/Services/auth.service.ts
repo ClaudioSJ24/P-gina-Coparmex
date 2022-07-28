@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment';
 import { UserData } from './../Modules/protected/components/socios/socios.component';
 import { JwtDto } from './../DTO/jwt-dto';
 import { NewPartnerDto } from './../DTO/new-partner-dto';
@@ -14,13 +15,13 @@ import { TokenService } from './token.service';
 export class AuthService {
 
 
-  url: string = 'http://localhost:9089/';
+  url = environment.urlBase;
 
   constructor(private httpC: HttpClient, private tokenS: TokenService) { }
 
   public save(partner:NewPartnerDto): Observable<any>{
 
-    return this.httpC.post<any>(this.url + "partners/save", partner);
+    return this.httpC.post<any>(this.url+ "partners/save", partner);
     
   }
 
