@@ -5,46 +5,9 @@ import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
-export interface UserData {
-  id: string;
-  name: string;
-  progress: string;
-  fruit: string;
-}
 
-/** Constants used to fill up our data base. */
-const FRUITS: string[] = [
-  'blueberry',
-  'lychee',
-  'kiwi',
-  'mango',
-  'peach',
-  'lime',
-  'pomegranate',
-  'pineapple',
-];
-const NAMES: string[] = [
-  'Maia',
-  'Asher',
-  'Olivia',
-  'Atticus',
-  'Amelia',
-  'Jack',
-  'Charlotte',
-  'Theodore',
-  'Isla',
-  'Oliver',
-  'Isabella',
-  'Jasper',
-  'Cora',
-  'Levi',
-  'Violet',
-  'Arthur',
-  'Mia',
-  'Thomas',
-  'Elizabeth',
-];
 
 @Component({
   selector: 'app-socios',
@@ -54,6 +17,7 @@ const NAMES: string[] = [
 export class SociosComponent implements OnInit {
 
   ELEMENT_DATA: Partner[] = [];
+  id: number = 0
   
 
   displayedColumns: string[] = ['id', 'name', 'lastname', 'user', 'actions'];
@@ -63,7 +27,7 @@ export class SociosComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private partnerS: PartnerService, router:Router) {
+  constructor(private partnerS: PartnerService, private router:Router) {
     // Create 100 users
    //const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
 
@@ -72,6 +36,7 @@ export class SociosComponent implements OnInit {
   }
   ngOnInit(): void {
     this.getAllPartners()
+    
   }
 
   ngAfterViewInit() {
@@ -89,24 +54,59 @@ export class SociosComponent implements OnInit {
   }
 
   addData() {
-    //const randomElementIndex = Math.floor(Math.random() * ELEMENT_DATA.length);
-    //this.dataToDisplay = [...this.dataToDisplay, ELEMENT_DATA[randomElementIndex]];
-    //this.dataSource.setData(this.dataToDisplay);
+    
+    
   }
 
-  removeData() {
+  editData(id: number){}
+
+  removeData(id: number) {
+
+    Swal.fire({
+      title: 'warning!',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      cancelButtonText: 'Cancel',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if(result.value){
+
+    
+        this.partnerS.deletePartner(id).subscribe( {
+          next: (data) =>{
+
+            this.getAllPartners()
+
+          }
+        }
+          
+        )
+         
+
+    
+
+      }
+    })
+
+    
+    
+
+    //console.log('el id es eliminada es '+id)
     ///this.dataToDisplay = this.dataToDisplay.slice(0, -1);
     //this.dataSource.setData(this.dataToDisplay);
   }
 
   getAllPartners(){
     this.partnerS.getPartners().subscribe(
-      res => {
+     { next: (res) => {
         this.dataSource.data = res.partner;
         
-        console.log('Respuesta -> '+this.dataSource)
+        
+        console.log('Respuesta -> '+res.partner)
         
       }
+    }
     )
   }
 

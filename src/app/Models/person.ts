@@ -6,7 +6,7 @@ export class Person {
     lastname: string;
     phone: number;
     email: string;
-    passes: number;
+    passes?: number;
 
     constructor( name: string, lastname: string, phone: number, email: string, passes: number){
         

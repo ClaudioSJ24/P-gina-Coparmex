@@ -1,5 +1,5 @@
 import { environment } from './../../environments/environment';
-import { UserData } from './../Modules/protected/components/socios/socios.component';
+
 import { JwtDto } from './../DTO/jwt-dto';
 import { NewPartnerDto } from './../DTO/new-partner-dto';
 import { Injectable } from '@angular/core';
