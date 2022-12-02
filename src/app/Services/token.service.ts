@@ -1,4 +1,4 @@
-import { UserData } from './../Modules/protected/components/socios/socios.component';
+
 import { Injectable } from '@angular/core';
 
 const TOKEN_KEY = 'AuthToken';

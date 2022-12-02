@@ -11,6 +11,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatCardModule} from '@angular/material/card';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatInputModule} from '@angular/material/input';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatPaginatorModule} from '@angular/material/paginator';
@@ -33,7 +34,8 @@ const materialUi = [
     MatInputModule,
     MatMenuModule,
     MatFormFieldModule,
-    MatTableModule
+    MatTableModule,
+    MatSnackBarModule
    
 ]
 

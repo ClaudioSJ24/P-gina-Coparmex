@@ -1,21 +1,22 @@
 export class Address {
 
-    private _street: string;
-    private _number: number;
-    private _colony: string;
-    private _codePostal: number;
-    private _city: string;
+    private street: string;
+    private number: number;
+    private colony: string;
+    private codePostal: number;
+    private city: string;
 
     constructor(street: string, number: number, colony: string, codePostal: number, city: string){
 
-        this._street = street;
-        this._number = number;
-        this._colony = colony;
-        this._codePostal = codePostal;
-        this._city = city;
+        this.street = street;
+        this.number = number;
+        this.colony = colony;
+        this.codePostal = codePostal;
+        this.city = city;
 
     }
 
+    /*
     
     public get street() : string {
         return this._street;
@@ -69,7 +70,7 @@ export class Address {
     
     
     
-    
+    */
     
     
     
