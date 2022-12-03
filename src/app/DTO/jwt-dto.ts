@@ -1,7 +1,11 @@
 export interface JwtDto {
 
-    token: string;
-    datos: string [];
-    user: string;
-    grantedAuthorities: string[];
+    
+    responseLogin: {
+
+        token: string;
+        user: string;
+        grantedAuthorities: string[];
+    };
+    
 }

@@ -34,7 +34,7 @@ export class LoginCComponent implements OnInit {
     password: new FormControl('', [Validators.required, Validators.minLength(4)])
   });
   
-  constructor(private dialog: MatDialog, private router: Router, private tokenS: TokenService, private authA: AuthService){
+  constructor( private router: Router, private tokenS: TokenService, private authA: AuthService){
 
     
   }

@@ -30,7 +30,7 @@ export class AuthService {
     return this.httpC.post<JwtDto>(this.url + "auth/login", user).pipe(
       map((res) => {
         
-        return res.datos 
+        return res.responseLogin 
         /**
          * Del objeto res, solo retorna los datos necesarios para almacenar en el sessionStore
          * res{
