@@ -1,0 +1,249 @@
+<mat-card>
+    <mat-card-header>
+
+      
+        
+    </mat-card-header>
+
+    
+
+      <img matCardImage src="../../../../../../../assets/img/logos/Coparmex2.png" >
+
+    <strong>
+
+      <h2 style="text-align: center;">{{action}} Socio</h2>
+    </strong>
+
+    
+    
+    <mat-card-content>
+        <form class="example-form" [formGroup]="formNew" (ngSubmit)="save()">
+
+          <h3>Datos Personales</h3>
+                      
+            <table class="example-full-width" cellspacing="0"><tr>
+              <td><mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Nombre</mat-label>
+                <input matInput
+                type="text"
+                formControlName="name">
+
+                <mat-error *ngIf="formNew.get('name')?.hasError('name') && !formNew.get('name')?.hasError('required')">
+                  Ingresar Nombre
+                </mat-error>
+                <mat-error *ngIf="formNew.get('name')?.hasError('required')">
+                  Campo <strong>Obligatorio</strong>
+                </mat-error>
+              </mat-form-field></td>
+
+              <td><mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Apellidos</mat-label>
+                <input matInput
+                type="text"
+                formControlName="lastname"
+                >
+
+                <mat-error *ngIf="formNew.get('lastname')?.hasError('lastname') && !formNew.get('lastname')?.hasError('required')">
+                  Ingresar Apellidos
+                </mat-error>
+                <mat-error *ngIf="formNew.get('lastname')?.hasError('required')">
+                  Campo <strong>Obligatorio</strong>
+                </mat-error>
+              </mat-form-field></td>
+
+              <td><mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Nombre Usuario</mat-label>
+                <input matInput
+                type="text"
+                formControlName="user"
+                >
+                <mat-error *ngIf="formNew.get('user')?.hasError('user') && !formNew.get('user')?.hasError('required')">
+                  Ingresar Nombre de Usuario
+                </mat-error>
+                <mat-error *ngIf="formNew.get('user')?.hasError('required')">
+                  Campo <strong>Obligatorio</strong>
+                </mat-error>
+              </mat-form-field></td>
+
+                            
+            </tr></table>
+
+            <table class="example-full-width" cellspacing="0"><tr>
+                <td><mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Email</mat-label>
+                  <input type="email" matInput  
+                  formControlName = "email"
+                  placeholder="Ex. pat@example.com">
+                  
+                  <mat-error *ngIf="formNew.get('email')?.hasError('email') && !formNew.get('email')?.hasError('required')">
+                    Ingresar correo electronico valido
+                  </mat-error>
+                  <mat-error *ngIf="formNew.get('email')?.hasError('required')">
+                    Campo <strong>Obligatorio</strong>
+                  </mat-error>
+                </mat-form-field></td>
+  
+                <td><mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Contraseña</mat-label>
+                  <input matInput
+                  type="password"
+                  formControlName="password">
+
+                  <mat-error *ngIf="formNew.get('password')?.hasError('minlength') && !formNew.get('password')?.hasError('required')">
+                    Ingresar contraseña minimo 5 caracteres
+                  </mat-error>
+                  <mat-error *ngIf="formNew.get('password')?.hasError('required')">
+                    Campo <strong>Obligatorio</strong>
+                  </mat-error>
+                </mat-form-field></td>
+  
+                <td><mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Teléfono</mat-label>
+                  <input matInput
+                  type="phone"
+                  formControlName="phone">
+                  <mat-error *ngIf="formNew.get('phone')?.hasError('phone') && !formNew.get('phone')?.hasError('required')">
+                    Ingresar contraseña minimo 5 caracteres
+                  </mat-error>
+                  <mat-error *ngIf="formNew.get('phone')?.hasError('required')">
+                    Campo <strong>Obligatorio</strong>
+                  </mat-error>
+                </mat-form-field></td>
+
+                  
+                
+              </tr></table>
+
+              
+
+              <table>
+                <tr>
+
+                  <td><mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Nombre de Empresa</mat-label>
+                    <input matInput
+                    type="text"
+                    formControlName="company">
+  
+                    <mat-error *ngIf="formNew.get('company')?.hasError('company') && !formNew.get('company')?.hasError('required')">
+                      Ingresar Nombre de Empresa
+                    </mat-error>
+                    <mat-error *ngIf="formNew.get('company')?.hasError('required')">
+                      Campo <strong>Obligatorio</strong>
+                    </mat-error>
+                  </mat-form-field></td>
+
+                  <td><mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Pases (opcional)</mat-label>
+                    <input matInput>
+                  </mat-form-field></td>
+                  
+                </tr>
+              </table>
+
+              
+
+              <h3>Dirección</h3>
+
+              <ng-container formGroupName="address">
+
+                <table class="example-full-width" cellspacing="0"><tr>
+                  <td><mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Calle</mat-label>
+                    <input matInput
+                    type="text"
+                    
+                    formControlName="street">
+                    <mat-error *ngIf="formNew.get('address.street')?.hasError('address.street') && !formNew.get('address.street')?.hasError('required')">
+                      Ingresar Nombre de Calle
+                    </mat-error>
+                    <mat-error *ngIf="formNew.get('address.street')?.hasError('required')">
+                      Campo <strong>Obligatorio</strong>
+                    </mat-error>
+                  </mat-form-field></td>
+    
+                  <td><mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Número</mat-label>
+                    <input matInput
+                    type="number"
+                    formControlName="number">
+                    <mat-error *ngIf="formNew.get('address.number')?.hasError('address.number') && !formNew.get('address.number')?.hasError('required')">
+                      Ingresar Número de Calle
+                    </mat-error>
+                    <mat-error *ngIf="formNew.get('address.number')?.hasError('required')">
+                      Campo <strong>Obligatorio</strong>
+                    </mat-error>
+                    
+                  </mat-form-field></td>
+    
+                  <td><mat-form-field class="example-full-width " appearance="fill" required>
+                    <mat-label>Colonia</mat-label>
+                    <input matInput
+                    type="text"
+                    formControlName="colony">
+
+                    <mat-error *ngIf="formNew.get('address.colony')?.hasError('address.colony') && !formNew.get('address.colony')?.hasError('required')">
+                      Ingresar Colonia
+                    </mat-error>
+                    <mat-error *ngIf="formNew.get('address.colony')?.hasError('required')">
+                      Campo <strong>Obligatorio</strong>
+                    </mat-error>
+                  </mat-form-field></td>
+    
+                  
+                </tr></table>
+            
+                <table class="example-full-width" cellspacing="0"><tr>
+                  <td><mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Código Postal</mat-label>
+                    <input matInput
+                    type="number"
+                    formControlName="codePostal">
+                    <mat-error *ngIf="formNew.get('address.codePostal')?.hasError('address.codePostal') && !formNew.get('address.codePostal')?.hasError('required')">
+                      Ingresar Codigo Postal
+                    </mat-error>
+                    <mat-error *ngIf="formNew.get('address.codePostal')?.hasError('required')">
+                      Campo <strong>Obligatorio</strong>
+                    </mat-error>
+                  </mat-form-field></td>
+    
+                  <td><mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Ciudad</mat-label>
+                    <input matInput
+                    type="text"
+                    formControlName="city">
+
+                    <mat-error *ngIf="formNew.get('address.city')?.hasError('address.city') && !formNew.get('address.city')?.hasError('required')">
+                      Ingresar Ciudad
+                    </mat-error>
+                    <mat-error *ngIf="formNew.get('address.city')?.hasError('required')">
+                      Campo <strong>Obligatorio</strong>
+                    </mat-error>
+                  </mat-form-field></td>             
+    
+                 
+                  
+                </tr></table>
+  
+
+              </ng-container>
+          
+              
+              <mat-card-actions aling="end">
+
+                <button type="cancel"  mat-raised-button [routerLink]="['/dashboard']" routerLinkActive="router-link-active"  >Cancelar</button>
+                <button type="submit" mat-button >{{action}}</button>
+
+              </mat-card-actions>       
+              
+            
+          </form>
+    </mat-card-content>
+
+    
+    
+    
+</mat-card>
+
+
+  

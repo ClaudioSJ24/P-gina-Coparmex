@@ -6,15 +6,14 @@ export class Person {
     lastname: string;
     phone: number;
     email: string;
-    passes?: number;
-
-    constructor( name: string, lastname: string, phone: number, email: string, passes: number){
+    
+    constructor( name: string, lastname: string, phone: number, email: string){
         
         this.name = name
         this.lastname = lastname
         this.phone = phone
         this.email = email
-        this.passes = passes
+        
     }
 
 
