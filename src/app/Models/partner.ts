@@ -1,10 +1,10 @@
 
-import { ServiciosModule } from './../Modules/servicios/servicios.module';
+
 import { Address } from './address';
 
 
 import { Person } from "./person";
-import { Role } from './role';
+
 
 export class Partner extends Person{
 
@@ -15,8 +15,8 @@ export class Partner extends Person{
     address: Address;
     dischargeDate!: Date;
     updateDate!: Date;
-    role!: Role;
-    partner!: string[];
+    
+    
 
 
     constructor(name: string, lastname: string, phone: number, email: string, company: string, address:Address, ){
