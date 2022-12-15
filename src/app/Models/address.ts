@@ -1,10 +1,10 @@
 export class Address {
 
-    private street: string;
-    private number: number;
-    private colony: string;
-    private codePostal: number;
-    private city: string;
+    street: string;
+    number: number;
+    colony: string;
+    codePostal: number;
+    city: string;
 
     constructor(street: string, number: number, colony: string, codePostal: number, city: string){
 

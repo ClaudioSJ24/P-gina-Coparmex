@@ -1,32 +1,66 @@
 .container {
-  margin: auto 50px;
-  height: 200vh;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 100%;
+  overflow: auto;
+}
+.filter{
+  margin: 0 auto;
+  width: 80%;
+  max-width: 100%;
+  
 }
 
 
 table {
 
   display: table;
-  width: 100%;
+  
+  
+  
       
       
   }
+
+  
+  td, th {
+    min-width: 140px;
+  }
+
+  
+.mat-column-id {
+  min-width: 34px;
+  border-right: solid 1px #e0e0e0;
+}
+
+
+.mat-column-actions {
+ 
+  min-width: 100px;
+ 
+  border-left: solid 1px #e0e0e0;
+  
+}
+
+
+
+
+.mat-column-company,
+.mat-column-street {
+  min-width: 200px;
+}
   
   .mat-form-field {
     font-size: 14px;
     width: 100%;
   }
 
-  .space-button{
-    display: flex;
-    
+  .spacer {
     flex : 1  1 auto;
   }
+  
+
+  
 
  
-  td, th {
-    display: ta;
-    width: 25%;
-    
-    
-  }
+ 

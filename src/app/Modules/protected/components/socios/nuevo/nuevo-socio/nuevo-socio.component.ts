@@ -41,8 +41,6 @@ export class NuevoSocioComponent implements OnInit {
     lastname: ['',Validators.required],
     phone: ['', Validators.required],
     email: ['',[Validators.required, Validators.email]],
-    passes: [''],
-    password: ['',Validators.required],
     company: ['', Validators.required],
     address: this.fBuilder.group({
       street: ['', Validators.required],
@@ -50,8 +48,7 @@ export class NuevoSocioComponent implements OnInit {
       colony: ['', Validators.required],
       codePostal: ['',Validators.required],
       city: ['', Validators.required]
-    }),
-    user: ['', Validators.required]
+    })
   }) 
 
  
@@ -73,13 +70,26 @@ export class NuevoSocioComponent implements OnInit {
     if(this.idPartner!== 0){
       this.action = 'Actualizar'
       this.partnerS.getPartner(this.idPartner).subscribe(
-        responseLogin =>{ this.data = responseLogin
+        res =>{ this.data = res
 
           
 
-          console.log(this.data),
-          console.log(this.data. responseLogin.email),
-          console.log(this.data. responseLogin.address)
+          this.formNew.controls['name'].setValue(this.data.responsePartner.name);
+          this.formNew.controls['lastname'].setValue(this.data.responsePartner.lastname);
+          this.formNew.controls['email'].setValue(this.data.responsePartner.email);
+          this.formNew.controls['phone'].setValue(this.data.responsePartner.phone);
+          this.formNew.controls['company'].setValue(this.data.responsePartner.company);
+          this.formNew.get('address.street')?.setValue(this.data.responsePartner.address.street);
+          
+          this.formNew.get('address.number')?.setValue(this.data.responsePartner.address.number);
+
+          this.formNew.get('address.colony')?.setValue(this.data.responsePartner.address.colony);
+
+          this.formNew.get('address.codePostal')?.setValue(this.data.responsePartner.address.codePostal);
+
+          this.formNew.get('address.city')?.setValue(this.data.responsePartner.address.city);
+
+          
     
          
         }
@@ -95,7 +105,7 @@ export class NuevoSocioComponent implements OnInit {
 
     const newPartner = this.formNew.value
     this.partnerS.savePartner(newPartner).subscribe( res => {
-      console.log("La respuesta es "+res.partner)
+      console.log("La respuesta es "+res.responsePartner)
 
       Swal.fire({
         title: 'Socio  '+this.formNew.get('name')?.value+'  Agregado',

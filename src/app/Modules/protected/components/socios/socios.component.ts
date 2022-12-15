@@ -1,42 +1,53 @@
+import { PartnerResponse } from './../../../../Interfaces/partnerResponse';
 import { Partner } from 'src/app/Models/partner';
 import { PartnerService } from 'src/app/Services/partner.service';
-import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
-import {MatPaginator} from '@angular/material/paginator';
-import {MatSort} from '@angular/material/sort';
-import {MatTableDataSource} from '@angular/material/table';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
-
-
+import { DataResponse } from 'src/app/Interfaces/data';
 
 @Component({
   selector: 'app-socios',
   templateUrl: './socios.component.html',
-  styleUrls: ['./socios.component.css']
+  styleUrls: ['./socios.component.css'],
 })
 export class SociosComponent implements OnInit {
-
   ELEMENT_DATA: Partner[] = [];
-  id: number = 0
-  
+  id: number = 0;
 
-  displayedColumns: string[] = ['id', 'name', 'lastname', 'user', 'actions'];
-  
-  dataSource = new  MatTableDataSource(this.ELEMENT_DATA)
+responsePartner!: DataResponse;
+  displayedColumns: string[] = [
+    'id',
+    'name',
+    'lastname',
+    'phone',
+    'email',
+    'company',
+    'street',
+    'number',
+    'colony',
+    'codePostal',
+    'city',
+    'actions',
+  ];
+
+  dataSource = new MatTableDataSource(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private partnerS: PartnerService, private router:Router) {
-    // Create 100 users
-   //const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
+  
 
+  constructor(private partnerS: PartnerService, private router: Router) {
+    // Create 100 users
+    //const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
     // Assign the data to the data source for the table to render
-    
   }
   ngOnInit(): void {
-    this.getAllPartners()
-    
+    this.getAllPartners();
   }
 
   ngAfterViewInit() {
@@ -53,63 +64,76 @@ export class SociosComponent implements OnInit {
     }
   }
 
-  addData() {
-    
-    
-  }
+  addData() {}
 
-  editData(id: number){}
+  editData(id: number) {}
 
   removeData(id: number) {
+   this.partnerS.getPartner(id).subscribe(
+     res => { this.responsePartner = res
 
-    Swal.fire({
-      title: 'warning!',
-      text: "You won't be able to revert this!",
-      icon: 'warning',
-      cancelButtonText: 'Cancel',
-      showCancelButton: true,
-      confirmButtonText: 'Yes, delete it!'
-    }).then((result) => {
-      if(result.value){
-
-    
-        this.partnerS.deletePartner(id).subscribe( {
-          next: (data) =>{
-
-            this.getAllPartners()
-
-          }
+      Swal.fire({
+        title: `Desea eliminar a socio ${this.responsePartner.responsePartner.name}`,
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        cancelButtonText: 'Cancelar',
+        confirmButtonText: 'Eliminar',
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        
+      }).then((result) => {
+        if (result.value) {
+          this.partnerS.deletePartner(id).subscribe({
+            next: () => {
+              this.getAllPartners();
+              this.toast();
+            },
+          });
         }
-          
-        )
-         
+      });
+      
 
-    
+     }
 
-      }
-    })
+     
+   )
 
-    
-    
+   
 
     //console.log('el id es eliminada es '+id)
     ///this.dataToDisplay = this.dataToDisplay.slice(0, -1);
     //this.dataSource.setData(this.dataToDisplay);
   }
 
-  getAllPartners(){
-    this.partnerS.getPartners().subscribe(
-     { next: (res) => {
-        this.dataSource.data = res.partner;
-        
-        
-        console.log('Respuesta -> '+res.partner)
-        
-      }
-    }
-    )
+  getAllPartners() {
+    this.partnerS.getPartners().subscribe({
+      next: (res) => {
+        this.dataSource.data = res.responsePartner;
+
+        console.log('Respuesta -> ' + res.responsePartner);
+      },
+    });
   }
 
+  toast(){
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+
+    Toast.fire({
+      icon: 'success',
+      
+    })
+  }
 }
 
 /** Builds and returns a new User. 
@@ -128,5 +152,3 @@ function createNewUser(id: number): UserData {
   };
 
 }*/
-
-
