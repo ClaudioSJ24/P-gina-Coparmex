@@ -16,7 +16,7 @@ export class PartnerService {
 
   constructor(private httpC: HttpClient) { }
 
-  public getPartners(): Observable<PartnerResponse>{
+  public getPartners(): Observable<any>{
 
     return this.httpC.get<PartnerResponse>(this.url +"partners/getAll")
 
@@ -26,7 +26,7 @@ export class PartnerService {
   /**
    * save
    */
-  public savePartner(partner: PartnerResponse) : Observable<PartnerResponse>{
+  public savePartner(partner: PartnerResponse) : Observable<any>{
 
     return this.httpC.post<PartnerResponse>(this.url +"partners/save", partner)
     

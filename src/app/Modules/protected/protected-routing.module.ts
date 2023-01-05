@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NuevoSocioComponent } from './components/socios/nuevo/nuevo-socio/nuevo-socio.component';
+import { NuevoUsuarioComponent } from './components/usuarios/nuevo-usuario/nuevo-usuario.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 const routes: Routes = [
@@ -16,7 +17,16 @@ const routes: Routes = [
   {
     path: 'partners/update/:id',
     component:  NuevoSocioComponent
+  },
+  {
+    path: 'users/save',
+    component:  NuevoUsuarioComponent
+  },
+  {
+    path: 'users/update/:id',
+    component:  NuevoUsuarioComponent
   }
+  
   
 ];
 

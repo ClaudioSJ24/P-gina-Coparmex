@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { DataResponse } from 'src/app/Interfaces/data';
 
+
 @Component({
   selector: 'app-socios',
   templateUrl: './socios.component.html',
@@ -17,8 +18,9 @@ import { DataResponse } from 'src/app/Interfaces/data';
 export class SociosComponent implements OnInit {
   ELEMENT_DATA: Partner[] = [];
   id: number = 0;
+  action: string = '';
 
-responsePartner!: DataResponse;
+  responsePartner!: DataResponse;
   displayedColumns: string[] = [
     'id',
     'name',
@@ -38,8 +40,6 @@ responsePartner!: DataResponse;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-
-  
 
   constructor(private partnerS: PartnerService, private router: Router) {
     // Create 100 users
@@ -64,46 +64,41 @@ responsePartner!: DataResponse;
     }
   }
 
-  addData() {}
+  
 
-  editData(id: number) {}
+  
 
   removeData(id: number) {
-   this.partnerS.getPartner(id).subscribe(
-     res => { this.responsePartner = res
+    this.partnerS.getPartner(id).subscribe((res) => {
+      this.responsePartner = res;
 
       Swal.fire({
         title: `Desea eliminar a socio ${this.responsePartner.responsePartner.name}`,
-        text: "You won't be able to revert this!",
         icon: 'warning',
         showCancelButton: true,
         cancelButtonText: 'Cancelar',
         confirmButtonText: 'Eliminar',
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        
       }).then((result) => {
         if (result.value) {
           this.partnerS.deletePartner(id).subscribe({
             next: () => {
+              this.action = 'eliminado';
+
+              this.toast(
+                this.responsePartner.responsePartner.name,
+                this.action
+              );
               this.getAllPartners();
-              this.toast();
+              
             },
           });
         }
       });
-      
+    });
 
-     }
-
-     
-   )
-
-   
-
-    //console.log('el id es eliminada es '+id)
-    ///this.dataToDisplay = this.dataToDisplay.slice(0, -1);
-    //this.dataSource.setData(this.dataToDisplay);
+    
   }
 
   getAllPartners() {
@@ -116,23 +111,23 @@ responsePartner!: DataResponse;
     });
   }
 
-  toast(){
+  toast(name: string, action: string): void {
     const Toast = Swal.mixin({
       toast: true,
-      position: 'top-end',
+      position: 'center',
       showConfirmButton: false,
       timer: 3000,
       timerProgressBar: true,
       didOpen: (toast) => {
-        toast.addEventListener('mouseenter', Swal.stopTimer)
-        toast.addEventListener('mouseleave', Swal.resumeTimer)
-      }
-    })
+        toast.addEventListener('mouseenter', Swal.stopTimer);
+        toast.addEventListener('mouseleave', Swal.resumeTimer);
+      },
+    });
 
     Toast.fire({
       icon: 'success',
-      
-    })
+      title: `Socio ${name} ${action} exitosamente¡¡¡¡¡¡ `,
+    });
   }
 }
 
