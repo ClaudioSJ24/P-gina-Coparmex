@@ -9,6 +9,7 @@ import { UserService } from 'src/app/Services/user.service';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { DataUser } from 'src/app/Interfaces/data';
+import { TokenService } from 'src/app/Services/token.service';
 
 
 
@@ -44,7 +45,7 @@ export class UsuariosComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private userS: UserService, private router: Router) { }
+  constructor(private userS: UserService, private router: Router, private tokenS:TokenService) { }
 
   ngOnInit(): void {
     this.getAllUsers();
@@ -75,35 +76,49 @@ export class UsuariosComponent implements OnInit {
 
   removeData(id: number){
 
-    this.userS.getUser(id).subscribe( res => {
+    const role = this.tokenS.getAutorities();
 
-      this.responseUser = res
+    role.forEach(rol => {
+      if(rol === 'ROL_ADMINISTRATOR'){
 
-      Swal.fire({
-        title: `Desea eliminar a socio ${this.responseUser.responseUser.name}`,
-        icon: 'warning',
-        showCancelButton: true,
-        cancelButtonText: 'Cancelar',
-        confirmButtonText: 'Eliminar',
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-      }).then((result) => {
-        if (result.value) {
-          this.userS.deleteUser(id).subscribe({
-            next: () => {
-              
+        this.userS.getUser(id).subscribe( res => {
 
-              this.toast(
-                this.responseUser.responseUser.name,
-                this.action
-              );
-              this.getAllUsers();
-              
-            },
+          this.responseUser = res
+    
+          Swal.fire({
+            title: `Desea eliminar a socio ${this.responseUser.responseUser.name}`,
+            icon: 'warning',
+            showCancelButton: true,
+            cancelButtonText: 'Cancelar',
+            confirmButtonText: 'Eliminar',
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+          }).then((result) => {
+            if (result.value) {
+              this.userS.deleteUser(id).subscribe({
+                next: () => {
+                  
+    
+                  this.toast(
+                    this.responseUser.responseUser.name,
+                    this.action
+                  );
+                  this.getAllUsers();
+                  
+                },
+              });
+            }
           });
-        }
-      });
-    });
+        });
+
+      }else{
+
+        this.toastE()
+
+      }
+    })
+
+    
 
     
 
@@ -126,6 +141,25 @@ export class UsuariosComponent implements OnInit {
     Toast.fire({
       icon: 'success',
       title: `Usuario ${name} ${action} exitosamente¡¡¡¡¡¡ `,
+    });
+  }
+
+  toastE(): void {
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'center',
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer);
+        toast.addEventListener('mouseleave', Swal.resumeTimer);
+      },
+    });
+
+    Toast.fire({
+      icon: 'error',
+      title: `Permiso Denegado¡¡¡¡¡¡ `,
     });
   }
 

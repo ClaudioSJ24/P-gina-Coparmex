@@ -44,7 +44,7 @@ const routes: Routes = [
   {
     path: 'dashboard',
     loadChildren: () => import('../app/Modules/protected/protected.module').then(m => m.ProtectedModule),
-    canActivate: [guard], data: {expectedRol: ['admin']} 
+    canActivate: [guard], data: {expectedRol: ['admin', 'user']} 
     //canActivate: [guard], data: {expectedRol: ['admin', 'partner']}
 
 
