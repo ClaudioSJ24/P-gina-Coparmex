@@ -9,6 +9,7 @@ import { AuthService } from './../../../../Services/auth.service';
 import { TokenService } from './../../../../Services/token.service';
 import { LoginDto } from './../../../../DTO/login-dto';
 import { JwtDto } from 'src/app/DTO/jwt-dto';
+import Swal from 'sweetalert2';
 
 
 
@@ -21,6 +22,7 @@ export class LoginCComponent implements OnInit {
 
   isLogged = false;
   isLoginFail = false;
+  hide = true;
   
  
   roles: string [] = [];
@@ -67,11 +69,35 @@ export class LoginCComponent implements OnInit {
         console.log(this.roles)
         
 
+      },
+      error =>{
+
+        this.toastE()
+        
       }
     )
     
     
     
+  }
+
+  toastE(): void {
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'center',
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer);
+        toast.addEventListener('mouseleave', Swal.resumeTimer);
+      },
+    });
+
+    Toast.fire({
+      icon: 'error',
+      title: `Usuario o Contraseña Incorrectos `,
+    });
   }
 
   onNoClick(){
