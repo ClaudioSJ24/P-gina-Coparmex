@@ -21,6 +21,8 @@
     color: white;
   }
 
+  
+
   h1{
     text-align: center;
     margin: 40px auto ;
@@ -39,5 +41,7 @@
     padding-right: 8px;
   }
   .content-b{
-    margin: auto;
+    
+    text-align: center;
+    
   }

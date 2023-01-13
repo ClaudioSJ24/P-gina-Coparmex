@@ -15,6 +15,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { PartnerService } from 'src/app/Services/partner.service';
 import Swal from 'sweetalert2';
 import { DataResponse } from 'src/app/Interfaces/data';
+import { TokenService } from 'src/app/Services/token.service';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 
@@ -40,7 +41,8 @@ export class NuevoSocioComponent implements OnInit {
     private fBuilder: FormBuilder,
     private route: Router,
     private partnerS: PartnerService,
-    private arouter: ActivatedRoute
+    private arouter: ActivatedRoute,
+    private tokenS: TokenService
   ) {
     this.formNew = this.fBuilder.group({
       class: ['partner'],
@@ -111,43 +113,34 @@ export class NuevoSocioComponent implements OnInit {
   }
 
   saveorupdate() {
-    if (this.data == undefined) {
-      const newPartner = this.formNew.value;
-      this.partnerS.savePartner(newPartner).subscribe((res) => {
+    const role = this.tokenS.getAutorities();
 
-        this.data = res;
-        console.log('La respuesta es ' + res.responsePartner);
-      
-       /* Swal.fire({
-          title: 'Socio  ' + this.formNew.get('name')?.value + '  Agregado',
-          text: 'Nombre de socio ',
-          timer: 3000,
-          icon: 'success',
-        });*/
-        
-        this.toast(this.data.responsePartner.name, this.actionM )
+    role.forEach((rol) => {
+      if (rol === 'ROL_ADMINISTRATOR') {
+        if (this.data == undefined) {
+          const newPartner = this.formNew.value;
+          this.partnerS.savePartner(newPartner).subscribe((res) => {
+            this.data = res;
+            this.toast(this.data.responsePartner.name, this.actionM);
 
-        this.route.navigateByUrl('/dashboard');
-      });
-    } else {
-      const updatePartner = this.formNew.value;
+            this.route.navigateByUrl('/dashboard');
+          });
+        } else {
+          const updatePartner = this.formNew.value;
 
-      this.partnerS
-        .updatePartner(this.idPartner, updatePartner)
-        .subscribe((res) => {
-          /* Swal.fire({
-              title:
-                'Socio  ' + this.formNew.get('name')?.value + '  Actualizado',
-              text: 'Nombre de socio ',
-              timer: 3000,
-              icon: 'success',
-            }); */
-            this.actionM = 'actualizado';
-            this.toast(this.formNew.get('name')?.value, this.actionM);
+          this.partnerS
+            .updatePartner(this.idPartner, updatePartner)
+            .subscribe((res) => {
+              this.actionM = 'actualizado';
+              this.toast(this.formNew.get('name')?.value, this.actionM);
 
-          this.route.navigateByUrl('/dashboard');
-        });
-    }
+              this.route.navigateByUrl('/dashboard');
+            });
+        }
+      } else {
+        this.toastE();
+      }
+    });
   }
 
   toast(name: string, action: string): void {
@@ -166,6 +159,25 @@ export class NuevoSocioComponent implements OnInit {
     Toast.fire({
       icon: 'success',
       title: `Socio ${name} ${action} exitosamente¡¡¡¡¡¡ `,
+    });
+  }
+
+  toastE(): void {
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'center',
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer);
+        toast.addEventListener('mouseleave', Swal.resumeTimer);
+      },
+    });
+
+    Toast.fire({
+      icon: 'error',
+      title: `Permiso Denegado¡¡¡¡¡¡ `,
     });
   }
 }

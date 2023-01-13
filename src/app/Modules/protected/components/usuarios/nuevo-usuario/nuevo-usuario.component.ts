@@ -29,7 +29,6 @@ export class NuevoUsuarioComponent implements OnInit {
 
   //Mediante el constructor se pueden injectar las dependencias necesarias para la incorporacion de cada metodo que pertenezca a la clase
   isAdmin: boolean = false;
-  
 
   constructor(
     private fBuilder: FormBuilder,
@@ -57,8 +56,6 @@ export class NuevoUsuarioComponent implements OnInit {
 
   ngOnInit(): void {
     this.update();
-    
-    
   }
 
   public update(): void {
@@ -82,21 +79,28 @@ export class NuevoUsuarioComponent implements OnInit {
   }
 
   public saveorupdate() {
-    if (this.user == undefined) {
-      const newUser = this.newForm.value;
-      this.userS.saveUser(newUser).subscribe((res) => {
-        this.user = res.responseUser;
-        this.toast(this.user.name, this.actionM);
-        this.router.navigateByUrl('/dashboard');
-      });
-    } else {
-      const updateUser = this.newForm.value;
-      this.userS.updateUser(this.idUser, updateUser).subscribe((resp) => {
-        this.actionM = 'actualizado';
-        this.toast(this.newForm.get('name')?.value, this.actionM);
-        this.router.navigateByUrl('/dashboard');
-      });
-    }
+    const role = this.tokenS.getAutorities();
+    role.forEach((rol) => {
+      if (rol === 'ROL_ADMINISTRATOR') {
+        if (this.user == undefined) {
+          const newUser = this.newForm.value;
+          this.userS.saveUser(newUser).subscribe((res) => {
+            this.user = res.responseUser;
+            this.toast(this.user.name, this.actionM);
+            this.router.navigateByUrl('/dashboard');
+          });
+        } else {
+          const updateUser = this.newForm.value;
+          this.userS.updateUser(this.idUser, updateUser).subscribe((resp) => {
+            this.actionM = 'actualizado';
+            this.toast(this.newForm.get('name')?.value, this.actionM);
+            this.router.navigateByUrl('/dashboard');
+          });
+        }
+      } else {
+        this.toastE();
+      }
+    });
   }
 
   toast(name: string, action: string): void {
@@ -115,6 +119,25 @@ export class NuevoUsuarioComponent implements OnInit {
     Toast.fire({
       icon: 'success',
       title: `Usuario ${name} ${action} exitosamente¡¡¡¡¡¡ `,
+    });
+  }
+
+  toastE(): void {
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'center',
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer);
+        toast.addEventListener('mouseleave', Swal.resumeTimer);
+      },
+    });
+
+    Toast.fire({
+      icon: 'error',
+      title: `Permiso Denegado¡¡¡¡¡¡ `,
     });
   }
 }

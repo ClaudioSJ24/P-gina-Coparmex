@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { GuardService as guard } from 'src/app/Guards/guard.service';
+
 
 import { NuevoSocioComponent } from './components/socios/nuevo/nuevo-socio/nuevo-socio.component';
 import { NuevoUsuarioComponent } from './components/usuarios/nuevo-usuario/nuevo-usuario.component';
@@ -15,12 +15,12 @@ const routes: Routes = [
   {
     path: 'partners/save',
     component:  NuevoSocioComponent,
-    canActivate: [guard], data: {expectedRol: ['admin']} 
+    
   },
   {
     path: 'partners/update/:id',
     component:  NuevoSocioComponent,
-    canActivate: [guard], data: {expectedRol: ['admin']} 
+    
   },
   
   {
@@ -32,7 +32,7 @@ const routes: Routes = [
   {
     path: 'users/update/:id',
     component:  NuevoUsuarioComponent,
-    canActivate: [guard], data: {expectedRol: ['admin']} 
+    
   }
   
   

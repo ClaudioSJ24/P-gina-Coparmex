@@ -160,21 +160,7 @@ export class SociosComponent implements OnInit {
       title: `Permiso Denegado¡¡¡¡¡¡ `,
     });
   }
+
+  
 }
 
-/** Builds and returns a new User. 
-function createNewUser(id: number): UserData {
-  const name =
-    NAMES[Math.round(Math.random() * (NAMES.length - 1))] +
-    ' ' +
-    NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) +
-    '.';
-
-  return {
-    id: id.toString(),
-    name: name,
-    progress: Math.round(Math.random() * 100).toString(),
-    fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
-  };
-
-}*/

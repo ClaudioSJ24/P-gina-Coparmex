@@ -26,8 +26,8 @@ export class GuardService implements CanActivate{
 
     if(!this.tokenS.getToken() || expectedRol.indexOf(this.roleU) === -1){
 
-      //this.router.navigate(['/'])
-      this.toast();
+      this.router.navigate(['/'])
+      
       return false;
     }
 
@@ -37,22 +37,5 @@ export class GuardService implements CanActivate{
     
   }
 
-  toast(): void {
-    const Toast = Swal.mixin({
-      toast: true,
-      position: 'center',
-      showConfirmButton: false,
-      timer: 2000,
-      timerProgressBar: true,
-      didOpen: (toast) => {
-        toast.addEventListener('mouseenter', Swal.stopTimer);
-        toast.addEventListener('mouseleave', Swal.resumeTimer);
-      },
-    });
-
-    Toast.fire({
-      icon: 'error',
-      title: `Permiso denegado¡¡¡¡¡ `,
-    });
-  }
+  
 }

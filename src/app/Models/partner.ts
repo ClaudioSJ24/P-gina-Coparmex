@@ -19,7 +19,7 @@ export class Partner extends Person{
     
 
 
-    constructor(name: string, lastname: string, phone: number, email: string, company: string, address:Address, ){
+    constructor(name: string, lastname: string, phone: number, email: string, company: string, address:Address){
 
         super(name, lastname, phone, email);
         this.company = company;

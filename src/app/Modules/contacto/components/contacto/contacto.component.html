@@ -15,41 +15,70 @@
         fxFlexFill class="grid-item">
         <div fxLayout="column" fxFlexAlign="center center">
           <H1>ESCRÍBENOS</H1>
-          <form class="example-form"  (ngSubmit)="onClick()">
+          <form class="example-form" [formGroup]="formC" (ngSubmit)="saveContact()">
                     
             <table class="example-full-width" cellspacing="0"><tr>
-              <mat-form-field class="example-full-width" appearance="fill">
+              <mat-form-field class="example-full-width" appearance="outline">
                 <mat-label>Nombre de la empresa</mat-label>
-                <input matInput>
+                <input matInput formControlName="company">
+                <mat-error *ngIf="formC.get('company')?.hasError('required')">
+                  Campo <strong>Obligatorio</strong>
+                </mat-error>
               </mat-form-field>
 
-              <mat-form-field class="example-full-width" appearance="fill">
-                <mat-label>Nombre del representante</mat-label>
-                <input matInput>
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Nombre</mat-label>
+                <input matInput formControlName="name">
+                <mat-error *ngIf="formC.get('name')?.hasError('required')">
+                  Campo <strong>Obligatorio</strong>
+                </mat-error>
               </mat-form-field>
 
-              <mat-form-field class="example-full-width" appearance="fill">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Apellidos</mat-label>
+                <input matInput formControlName="lastname">
+                <mat-error *ngIf="formC.get('lastname')?.hasError('required')">
+                  Campo <strong>Obligatorio</strong>
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width" appearance="outline">
                 <mat-label>Correo Electronico</mat-label>
-                <input matInput>
+                <input matInput  
+                type="email"
+                formControlName="email"
+                placeholder="Ex. pat@example.com">
+                <mat-error *ngIf="formC.get('email')?.hasError('required')">
+                  Campo <strong>Obligatorio</strong>
+                </mat-error>
               </mat-form-field>
 
-              <mat-form-field class="example-full-width" appearance="fill">
+              <mat-form-field class="example-full-width" appearance="outline">
                 <mat-label>Teléfono</mat-label>
-                <input matInput>
+                <input matInput formControlName="phone">
+                <mat-error *ngIf="formC.get('phone')?.hasError('required')">
+                  Campo <strong>Obligatorio</strong>
+                </mat-error>
               </mat-form-field>
 
-              <mat-form-field class="example-full-width" appearance="fill">
+              <mat-form-field class="example-full-width" appearance="outline">
                 <mat-label>Giro de la empresa</mat-label>
-                <input matInput>
+                <input matInput formControlName="activity">
+                <mat-error *ngIf="formC.get('activity')?.hasError('required')">
+                  Campo <strong>Obligatorio</strong>
+                </mat-error>
               </mat-form-field>
 
-              <mat-form-field class="example-full-width" appearance="fill">
+              <mat-form-field class="example-full-width" appearance="outline">
                 <mat-label>Mensaje</mat-label>
-                <textarea matInput placeholder=""></textarea>
+                <textarea matInput placeholder="" formControlName="message"></textarea>
+                <mat-error *ngIf="formC.get('message')?.hasError('required')">
+                  Campo <strong>Obligatorio</strong>
+                </mat-error>
               </mat-form-field>
 
               <div class="content-b">
-                <button mat-raised-button color="warn" class="centrar-b">Enviar</button>
+                <button mat-stroked-button class="centrar-b" [disabled]="formC.invalid">Enviar</button>
               </div>
 
             </tr></table>
